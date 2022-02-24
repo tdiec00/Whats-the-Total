@@ -2,7 +2,13 @@
 
 ## Overview
 
+### App Name
+
 Whats-the-Total
+
+### Description
+
+This is a grocery store/shopping cart app where admins are able to create and manage grocery store products. The user/customer is able to browse and add items to their shopping cart. The admins/owners are able to checkout the user/customers.
 
 <br>
 
@@ -32,9 +38,7 @@ Whats-the-Total
 
 #### Wireframes
 
-![Desktop wire frame](./images/Desktop.png)
-
-![Mobile wire frame](./images/Mobile.png)
+![Wire frames](./images/Mobile-Desktop-Display.png)
 
 #### Component Tree
 
