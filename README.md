@@ -46,37 +46,30 @@ Whats-the-Total
 
 ![Component Heirarchy](images/Component-Heirarchy.png)
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
-
-#### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like.
-
-```structure
-
-src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
-|__ services/
-
-```
-
 #### Time Estimates
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+| Add Contact Form    |    L     |     3 hrs      |               |             |
+| Create CRUD Actions |    H     |     3 hrs      |               |             |
+| TOTAL               |          |     6 hrs      |               |             |
+| Add Contact Form    |    L     |     3 hrs      |               |             |
+| Create CRUD Actions |    H     |     3 hrs      |               |             |
+| TOTAL               |          |     6 hrs      |               |             |
+| Add Contact Form    |    L     |     3 hrs      |               |             |
+| Create CRUD Actions |    H     |     3 hrs      |               |             |
+| TOTAL               |          |     6 hrs      |               |             |
+| Add Contact Form    |    L     |     3 hrs      |               |             |
+| Create CRUD Actions |    H     |     3 hrs      |               |             |
+| TOTAL               |          |     6 hrs      |               |             |
+| Add Contact Form    |    L     |     3 hrs      |               |             |
+| Create CRUD Actions |    H     |     3 hrs      |               |             |
+| TOTAL               |          |     6 hrs      |               |             |
+| Add Contact Form    |    L     |     3 hrs      |               |             |
+| Create CRUD Actions |    H     |     3 hrs      |               |             |
+| TOTAL               |          |     6 hrs      |               |             |
 
 <br>
 
@@ -84,10 +77,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
-<br>
+![ERD Model](./images/ERD.jpg)
 
 ---
 
