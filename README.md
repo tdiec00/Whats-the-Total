@@ -77,7 +77,7 @@ Whats-the-Total
 
 #### ERD Model
 
-![ERD Model](./images/ERD.jpg)
+![ERD Model](./images/ERD.png)
 
 ---
 
