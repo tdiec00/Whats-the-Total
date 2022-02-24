@@ -56,7 +56,7 @@ This is a grocery store/shopping cart app where admins are able to create and ma
 | Create react app                      |          |     2 hrs      |               |             |
 | Screen and components setup for react |          |     2 hrs      |               |             |
 | API configuration setup               |          |     4 hrs      |               |             |
-| Create products for admins            |          |      3hrs      |               |             |
+| Create products for admins            |          |     3 hrs      |               |             |
 | Update products for admins            |          |     3 hrs      |               |             |
 | Create shopping cart for users        |          |     3 hrs      |               |             |
 | Add to and delete from shopping cart  |          |     4 hrs      |               |             |
@@ -66,10 +66,12 @@ This is a grocery store/shopping cart app where admins are able to create and ma
 | Navbar functionality                  |          |     2 hrs      |               |             |
 | Style navbar                          |          |     4 hrs      |               |             |
 | Footer functionality                  |          |     3 hrs      |               |             |
-| Style footer                          |          |      3hrs      |               |             |
+| Style footer                          |          |     3 hrs      |               |             |
 | Test frontend routes and calls        |          |     3 hrs      |               |             |
 | Refactor code                         |          |     5 hrs      |               |             |
-| Total                                 |          |     65 hrs     |               |             |
+| User authorization backend            |          |     4 hrs      |               |             |
+| User authorization frontend           |          |     4 hrs      |               |             |
+| Total                                 |          |     73 hrs     |               |             |
 
 <br>
 
