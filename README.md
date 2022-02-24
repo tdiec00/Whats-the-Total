@@ -19,8 +19,6 @@ Whats-the-Total
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |    Library    | Description               |
 | :-----------: | :------------------------ |
 |     React     | frontend library          |
@@ -44,8 +42,6 @@ Whats-the-Total
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
 | Task                                  | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Create Rails application              |          |     1 hrs      |               |             |
@@ -56,16 +52,20 @@ Whats-the-Total
 | Create react app                      |          |     2 hrs      |               |             |
 | Screen and components setup for react |          |     2 hrs      |               |             |
 | API configuration setup               |          |     4 hrs      |               |             |
-|                                       |          |     6 hrs      |               |             |
-| Add Contact Form                      |          |     3 hrs      |               |             |
-| Create CRUD Actions                   |          |     3 hrs      |               |             |
-| TOTAL                                 |          |     6 hrs      |               |             |
-| Add Contact Form                      |          |     3 hrs      |               |             |
-| Create CRUD Actions                   |          |     3 hrs      |               |             |
-| TOTAL                                 |          |     6 hrs      |               |             |
-| Add Contact Form                      |          |     3 hrs      |               |             |
-| Create CRUD Actions                   |          |     3 hrs      |               |             |
-| TOTAL                                 |          |     6 hrs      |               |             |
+| Create products for admins            |          |      3hrs      |               |             |
+| Update products for admins            |          |     3 hrs      |               |             |
+| Create shopping cart for users        |          |     3 hrs      |               |             |
+| Add to and delete from shopping cart  |          |     4 hrs      |               |             |
+| Checkout shopping cart functionality  |          |     4 hrs      |               |             |
+| Styling screens                       |          |     6 hrs      |               |             |
+| Styling navbar and footer             |          |     4 hrs      |               |             |
+| Navbar functionality                  |          |     2 hrs      |               |             |
+| Style navbar                          |          |     4 hrs      |               |             |
+| Footer functionality                  |          |     3 hrs      |               |             |
+| Style footer                          |          |      3hrs      |               |             |
+| Test frontend routes and calls        |          |     3 hrs      |               |             |
+| Refactor code                         |          |     5 hrs      |               |             |
+| Total                                 |          |     65 hrs     |               |             |
 
 <br>
 
