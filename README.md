@@ -6,9 +6,7 @@ Overview
 MVP
 
 Goals
-
 Libraries and Dependencies
-
 Client (Front End)
 
 Wireframes
