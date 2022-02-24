@@ -4,20 +4,33 @@ PROJECT 4 README
 
 Overview
 MVP
+
 Goals
+
 Libraries and Dependencies
+
 Client (Front End)
+
 Wireframes
+
 Component Tree
+
 Component Architecture
+
 Time Estimates
+
 Server (Back End)
+
 ERD Model
+
 Post-MVP
+
 Code Showcase
+
 Code Issues & Resolutions
 
 Overview
+
 Whats-the-Total
 
 MVP
