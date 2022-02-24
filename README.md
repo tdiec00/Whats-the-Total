@@ -55,8 +55,8 @@ Whats-the-Total
 | deploy backend                        |          |     4 hrs      |               |             |
 | Create react app                      |          |     2 hrs      |               |             |
 | Screen and components setup for react |          |     2 hrs      |               |             |
-| Create CRUD Actions                   |          |     3 hrs      |               |             |
-| TOTAL                                 |          |     6 hrs      |               |             |
+| API configuration setup               |          |     4 hrs      |               |             |
+|                                       |          |     6 hrs      |               |             |
 | Add Contact Form                      |          |     3 hrs      |               |             |
 | Create CRUD Actions                   |          |     3 hrs      |               |             |
 | TOTAL                                 |          |     6 hrs      |               |             |
