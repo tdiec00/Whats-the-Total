@@ -8,15 +8,12 @@ Whats-the-Total
 
 ## MVP
 
-<br>
-
-### Goals
-
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- Functional models, controllers, and routes for the rails backend
+- Functional CRUD operations for products and categories for the market
+- Reactive CSS design for mobile and destkop
+- Working design and functionality for all screens
+- Users can add and remove items from their carts
+- Pricing works for shopping cart
 
 <br>
 
@@ -49,26 +46,26 @@ Whats-the-Total
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |               |             |
-| Create CRUD Actions |    H     |     3 hrs      |               |             |
-| TOTAL               |          |     6 hrs      |               |             |
-| Add Contact Form    |    L     |     3 hrs      |               |             |
-| Create CRUD Actions |    H     |     3 hrs      |               |             |
-| TOTAL               |          |     6 hrs      |               |             |
-| Add Contact Form    |    L     |     3 hrs      |               |             |
-| Create CRUD Actions |    H     |     3 hrs      |               |             |
-| TOTAL               |          |     6 hrs      |               |             |
-| Add Contact Form    |    L     |     3 hrs      |               |             |
-| Create CRUD Actions |    H     |     3 hrs      |               |             |
-| TOTAL               |          |     6 hrs      |               |             |
-| Add Contact Form    |    L     |     3 hrs      |               |             |
-| Create CRUD Actions |    H     |     3 hrs      |               |             |
-| TOTAL               |          |     6 hrs      |               |             |
-| Add Contact Form    |    L     |     3 hrs      |               |             |
-| Create CRUD Actions |    H     |     3 hrs      |               |             |
-| TOTAL               |          |     6 hrs      |               |             |
+| Task                                  | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Create Rails application              |          |     1 hrs      |               |             |
+| Rails Scaffold                        |          |     1 hrs      |               |             |
+| Backend Controllers                   |          |     3 hrs      |               |             |
+| Test backend routes                   |          |     2 hrs      |               |             |
+| deploy backend                        |          |     4 hrs      |               |             |
+| Create react app                      |          |     2 hrs      |               |             |
+| Screen and components setup for react |          |     2 hrs      |               |             |
+| Create CRUD Actions                   |          |     3 hrs      |               |             |
+| TOTAL                                 |          |     6 hrs      |               |             |
+| Add Contact Form                      |          |     3 hrs      |               |             |
+| Create CRUD Actions                   |          |     3 hrs      |               |             |
+| TOTAL                                 |          |     6 hrs      |               |             |
+| Add Contact Form                      |          |     3 hrs      |               |             |
+| Create CRUD Actions                   |          |     3 hrs      |               |             |
+| TOTAL                                 |          |     6 hrs      |               |             |
+| Add Contact Form                      |          |     3 hrs      |               |             |
+| Create CRUD Actions                   |          |     3 hrs      |               |             |
+| TOTAL                                 |          |     6 hrs      |               |             |
 
 <br>
 
@@ -82,7 +79,9 @@ Whats-the-Total
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Admin specific responsibilities
+- Add barcodes for products
+- More varieties for the same product (different types of oranges)
 
 ---
 
