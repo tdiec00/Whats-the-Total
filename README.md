@@ -24,13 +24,12 @@ Whats-the-Total
 
 > Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|    Library    | Description               |
+| :-----------: | :------------------------ |
+|     React     | frontend library          |
+| React Router  | routing library for react |
+| Ruby on Rails | backend library           |
+|   Tailwind    | Styling library           |
 
 <br>
 
