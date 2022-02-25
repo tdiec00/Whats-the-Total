@@ -5,4 +5,12 @@ export const createShoppingCart = async (user_id) => {
   return resp.data
 }
 
-export const updateShoppingCart = async () => {}
+export const updateShoppingCart = async (user_id, cart_id, cartData) => {
+  const resp = await api.put(`/users/${user_id}/shopping_carts/${cart_id}`, {shopping_cart: cartData})
+  return resp.data
+}
+
+export const deleteShoppingCart = async (user_id, cart_id) => {
+  const resp = await api.delete(`/users/${user_id}/${cart_id}`)
+  return resp.data
+}
