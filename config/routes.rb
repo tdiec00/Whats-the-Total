@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   post '/auth/login', to: 'authentications#login'
   get '/auth/verify', to: 'authentications#verify'
   post '/users/:id/:product_id', to: 'users#add_product'
-
+  delete '/users/:id/:product_id', to: 'users#delete_product'
   resources :users 
   resources :products
  

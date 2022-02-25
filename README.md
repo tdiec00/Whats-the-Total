@@ -109,6 +109,7 @@ This is a grocery store/shopping cart app where admins are able to create and ma
 - Admin specific responsibilities
 - Add barcodes for products
 - More varieties for the same product (different types of oranges)
+- Make user products unique with an increment function
 
 ---
 
