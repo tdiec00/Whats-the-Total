@@ -1,7 +1,12 @@
 import {api} from "./apiConfig"
 
+export const getOneShoppingCart = async (user_id, cart_id) => {
+  const resp = await api.get(`/users/${user_id}/${cart_id}`)
+  return resp.data
+}
+
 export const createShoppingCart = async (user_id) => {
-  const resp = api.post(`/users/${user_id}/shopping_carts`)
+  const resp = await api.post(`/users/${user_id}/shopping_carts`)
   return resp.data
 }
 
