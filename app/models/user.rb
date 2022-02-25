@@ -1,8 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
-  has_one :shopping_cart
-  has_many :products
-   validates :username, presence: true, uniqueness: true
+  has_and_belongs_to_many :products
+  validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :password, length: { minimum: 6 }

@@ -14,6 +14,13 @@ class UsersController < ApplicationController
     render json: @user
   end
 
+  def add_product
+    @single_user = User.find(params[:id])
+    @new_product = Product.find(params[:product_id])
+    @single_user.products << @new_product
+    render json: @single_user.products.all
+  end
+
   # POST /users
   def create
     @user = User.new(user_params)
