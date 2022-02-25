@@ -50,10 +50,10 @@
 # ]
 
 # @trung = User.find(1)
-@immanuel = User.find(2)
-@orange = Product.find(3)
-@tater = Product.find(41)
-@brocolli = Product.find(40)
-@chobani = Product.find(35)
-# @trung.products << [@orange, @tater, @brocolli, @chobani]
-@immanuel.products << [@orange, @tater, @brocolli, @chobani]
+# @immanuel = User.find(2)
+# @orange = Product.find(3)
+# @tater = Product.find(41)
+# @brocolli = Product.find(40)
+# @chobani = Product.find(35)
+# # @trung.products << [@orange, @tater, @brocolli, @chobani]
+# @immanuel.products << [@orange, @tater, @brocolli, @chobani]
