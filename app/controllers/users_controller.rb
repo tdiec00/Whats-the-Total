@@ -14,6 +14,8 @@ class UsersController < ApplicationController
     render json: @user
   end
 
+ 
+
   def add_product
     @single_user = User.find(params[:id])
     p @single_user, "hello"
@@ -31,6 +33,12 @@ class UsersController < ApplicationController
     @single_user1.products.delete(params[:product_id])
     @single_user1.products << @array
     render json: @single_user1.products
+  end
+
+   def get_all_products
+     @single_user2 = User.find(params[:id])
+     @all_products = @single_user2.products.all
+     render json: @all_products
   end
 
   # POST /users
