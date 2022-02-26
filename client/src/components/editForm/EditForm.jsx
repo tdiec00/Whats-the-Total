@@ -1,8 +1,24 @@
-import React from "react"
+import {useState} from "react"
+import {updateProduct} from "../../services/products"
 
-export default function EditForm() {
+export default function EditForm(props) {
+  const [name, setName] = useState("")
+  const [price, setPrice] = useState("")
+  const [category, setCategory] = useState("")
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const newProduct = {
+      name,
+      price,
+      category,
+    }
+    await updateProduct(props.product_id, newProduct)
+    navigate("/products")
+  }
+
   return (
-    <form>
+    <form onSubmit={(e) => handleSubmit(e)}>
       <input placeholder="name" />
       <input placeholder="price" />
       <select>
