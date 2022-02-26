@@ -38,7 +38,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/shopping-cart" element={<Cart />} />
         <Route path="/products/:category" element={<ProductsContainer />} />
-        <Route path="/products/edit" element={<EditForm />} />
+        <Route path="/products/edit/:id" element={<EditForm />} />
       </Routes>
       <Footer />
     </div>

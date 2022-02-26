@@ -34,7 +34,7 @@ export default function ProductsContainer() {
             <h1>{product.name}</h1>
             <h3>${product.price.toFixed(2)}</h3>
             <button onClick={() => handleSubmit(product.id)}>Add to Cart</button>
-            <ProductEdit />
+            <ProductEdit product_id={product.id} />
           </div>
         ) : null
       )}
