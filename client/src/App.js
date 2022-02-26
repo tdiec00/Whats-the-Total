@@ -9,6 +9,7 @@ import Products from "./screens/products/Products"
 import {verifyUser} from "./services/users"
 import ProductsContainer from "./components/productsContainer/ProductsContainer"
 import Cart from "./screens/cart/Cart"
+import EditForm from "./components/editForm/EditForm"
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
@@ -37,6 +38,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/shopping-cart" element={<Cart />} />
         <Route path="/products/:category" element={<ProductsContainer />} />
+        <Route path="/products/edit" element={<EditForm />} />
       </Routes>
       <Footer />
     </div>

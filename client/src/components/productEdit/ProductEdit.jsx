@@ -1,5 +1,7 @@
-import React from "react"
+import {useNavigate} from "react-router-dom"
 
 export default function ProductEdit() {
-  return <button>ProductEdit</button>
+  const navigate = useNavigate()
+
+  return <button onClick={navigate("/products/edit")}>ProductEdit</button>
 }
