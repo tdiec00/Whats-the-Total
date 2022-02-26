@@ -8,7 +8,7 @@
 # Product.destroy_all
 
 # Product.create! [
-#   {"name": "orange", price: 1, category: "fruits"},
+#   {name: "orange", price: 1, category: "fruits"},
 #   {name: "apple", price: 0.5, category: "fruits"},
 #   {name: "banana", price: 1.25, category: "fruits"},
 #   {name: "kiwi", price: 0.75, category: "fruits"},

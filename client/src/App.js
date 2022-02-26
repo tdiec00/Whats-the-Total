@@ -3,11 +3,12 @@ import {useState, useEffect} from "react"
 import Navbar from "./components/navbar/Navbar"
 import Footer from "./components/footer/Footer"
 import Home from "./screens/home/Home"
-import Login from "./components/login/Login"
-import SignUp from "./components/signup/SignUp"
-import ProductContainer from "./components/productContainer/ProductContainer"
-import ShoppingCartContainer from "./components/shoppingCartContainer/ShoppingCartContainer"
+import Login from "./screens/login/Login"
+import SignUp from "./screens/signup/SignUp"
+import Products from "./screens/products/Products"
 import {verifyUser} from "./services/users"
+import ShoppingCart from "./screens/shoppingcart/ShoppingCart"
+import ProductsCategory from "./components/productsCategory/ProductsCategory"
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
@@ -32,8 +33,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login setCurrentUser={setCurrentUser} />} />
         <Route path="/signup" element={<SignUp setCurrentUser={setCurrentUser} />} />
-        <Route path="/products/*" element={<ProductContainer />} />
-        <Route path="/shopping-cart" element={<ShoppingCartContainer />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/shopping-cart" element={<ShoppingCart />} />
+        <Route path="/products/:category" element={<ProductsCategory />} />
       </Routes>
       <Footer />
     </div>
