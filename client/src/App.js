@@ -7,7 +7,7 @@ import Login from "./screens/login/Login"
 import SignUp from "./screens/signup/SignUp"
 import Products from "./screens/products/Products"
 import {verifyUser} from "./services/users"
-import ProductsCategory from "./components/productsCategory/ProductsCategory"
+import ProductsContainer from "./components/productsContainer/ProductsContainer"
 import Cart from "./screens/cart/Cart"
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
         <Route path="/signup" element={<SignUp setCurrentUser={setCurrentUser} />} />
         <Route path="/products" element={<Products />} />
         <Route path="/shopping-cart" element={<Cart />} />
-        <Route path="/products/:category" element={<ProductsCategory />} />
+        <Route path="/products/:category" element={<ProductsContainer />} />
       </Routes>
       <Footer />
     </div>

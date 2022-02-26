@@ -1,6 +1,8 @@
 import {useState, useEffect} from "react"
 import {getUserProducts} from "../../services/users"
 import {deleteFromCart} from "../../services/users"
+import ShoppingTotal from "../shoppingTotal/ShoppingTotal"
+import CategoryNavContainer from "../catgeoryNavContainer/CategoryNavContainer"
 
 export default function ShoppingCartContainer() {
   const [products, setProducts] = useState([])
@@ -22,6 +24,7 @@ export default function ShoppingCartContainer() {
 
   return (
     <div>
+      <CategoryNavContainer />
       {products.map((product, index) => {
         return (
           <div key={index}>
@@ -31,6 +34,7 @@ export default function ShoppingCartContainer() {
           </div>
         )
       })}
+      <ShoppingTotal products={products} />
     </div>
   )
 }
