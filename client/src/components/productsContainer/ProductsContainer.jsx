@@ -4,6 +4,7 @@ import {getAllProducts} from "../../services/products"
 import CategoryNavContainer from "../catgeoryNavContainer/CategoryNavContainer"
 import {addToCart} from "../../services/users"
 import {useNavigate} from "react-router-dom"
+import ProductEdit from "../productEdit/ProductEdit"
 
 export default function ProductsContainer() {
   const [products, setProducts] = useState([])
@@ -33,6 +34,7 @@ export default function ProductsContainer() {
             <h1>{product.name}</h1>
             <h3>${product.price.toFixed(2)}</h3>
             <button onClick={() => handleSubmit(product.id)}>Add to Cart</button>
+            <ProductEdit />
           </div>
         ) : null
       )}

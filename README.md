@@ -110,6 +110,8 @@ This is a grocery store/shopping cart app where admins are able to create and ma
 - Add barcodes for products
 - More varieties for the same product (different types of oranges)
 - Make user products unique with an increment function
+- Sales tax for each state
+- State field for user
 
 ---
 

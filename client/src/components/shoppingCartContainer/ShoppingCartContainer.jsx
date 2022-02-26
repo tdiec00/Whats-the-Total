@@ -22,18 +22,25 @@ export default function ShoppingCartContainer() {
     window.location.reload(false)
   }
 
+  console.log(products)
+
   return (
     <div>
       <CategoryNavContainer />
-      {products.map((product, index) => {
-        return (
-          <div key={index}>
-            <h1>{product.name}</h1>
-            <h3>${product.price.toFixed(2)}</h3>
-            <button onClick={() => handleDelete(product.id)}>Remove From Cart</button>
-          </div>
-        )
-      })}
+
+      {products.length == 0 ? (
+        <h1>Your shopping Cart is empty. Please continue shopping</h1>
+      ) : (
+        products.map((product, index) => {
+          return (
+            <div key={index}>
+              <h1>{product.name}</h1>
+              <h3>${product.price.toFixed(2)}</h3>
+              <button onClick={() => handleDelete(product.id)}>Remove From Cart</button>
+            </div>
+          )
+        })
+      )}
       <ShoppingTotal products={products} />
     </div>
   )

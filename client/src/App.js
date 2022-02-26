@@ -23,6 +23,7 @@ function App() {
 
   const logOut = () => {
     localStorage.removeItem("authToken")
+    localStorage.removeItem("id")
     setCurrentUser(null)
   }
 
