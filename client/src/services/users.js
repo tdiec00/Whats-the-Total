@@ -3,6 +3,7 @@ import {api} from "./apiConfig"
 export const loginUser = async (loginData) => {
   const resp = await api.post(`auth/login`, {authentication: loginData})
   localStorage.setItem("authToken", resp.data.token)
+  localStorage.setItem("id", resp.data.user.id)
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
   return resp.data.user
 }
@@ -26,5 +27,15 @@ export const verifyUser = async () => {
 
 export const getOneUser = async (user_id) => {
   const resp = await api.get(`users/${user_id}`)
+  return resp.data
+}
+
+export const addToCart = async (user_id, product_id) => {
+  const resp = await api.post(`/users/${user_id}/${product_id}`)
+  return resp.data
+}
+
+export const getUserProducts = async (user_id) => {
+  const resp = await api.get(`/users/${user_id}/products`)
   return resp.data
 }
