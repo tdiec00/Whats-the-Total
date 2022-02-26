@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react"
 import {getUserProducts} from "../../services/users"
+import {deleteFromCart} from "../../services/users"
 
 export default function ShoppingCartContainer() {
   const [products, setProducts] = useState([])
@@ -13,6 +14,12 @@ export default function ShoppingCartContainer() {
     fetchProducts()
   }, [])
 
+  const handleDelete = async (product_id) => {
+    const id = localStorage.getItem("id")
+    await deleteFromCart(id, product_id)
+    window.location.reload(false)
+  }
+
   return (
     <div>
       {products.map((product, index) => {
@@ -20,6 +27,7 @@ export default function ShoppingCartContainer() {
           <div key={index}>
             <h1>{product.name}</h1>
             <h3>${product.price.toFixed(2)}</h3>
+            <button onClick={() => handleDelete(product.id)}>Remove From Cart</button>
           </div>
         )
       })}

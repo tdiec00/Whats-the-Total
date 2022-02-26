@@ -39,3 +39,8 @@ export const getUserProducts = async (user_id) => {
   const resp = await api.get(`/users/${user_id}/products`)
   return resp.data
 }
+
+export const deleteFromCart = async (user_id, product_id) => {
+  const resp = await api.delete(`/users/${user_id}/${product_id}`)
+  return resp.data
+}

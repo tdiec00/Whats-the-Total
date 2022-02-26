@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show update destroy ]
-  before_action :authorize_request, except: [:create, :get_all_products]
+  before_action :authorize_request, except: [:create, :get_all_products, :delete_product]
 
   # GET /users
   def index
