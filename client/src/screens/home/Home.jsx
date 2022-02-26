@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom"
-
+import CategoryNavContainer from "../../components/catgeoryNavContainer/CategoryNavContainer"
 export default function Home() {
   return (
     <div>
@@ -9,6 +9,7 @@ export default function Home() {
       <Link to="/login">
         <h1>Login</h1>
       </Link>
+      <CategoryNavContainer />
     </div>
   )
 }
