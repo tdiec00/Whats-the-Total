@@ -2,7 +2,6 @@ import {useState, useEffect} from "react"
 import {getUserProducts} from "../../services/users"
 import {deleteFromCart} from "../../services/users"
 import ShoppingTotal from "../shoppingTotal/ShoppingTotal"
-import CategoryNavContainer from "../catgeoryNavContainer/CategoryNavContainer"
 
 export default function ShoppingCartContainer() {
   const [products, setProducts] = useState([])
@@ -22,12 +21,8 @@ export default function ShoppingCartContainer() {
     window.location.reload(false)
   }
 
-  console.log(products)
-
   return (
     <div>
-      <CategoryNavContainer />
-
       {products.length == 0 ? (
         <h1>Your shopping Cart is empty. Please continue shopping</h1>
       ) : (

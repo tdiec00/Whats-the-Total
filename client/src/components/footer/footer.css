@@ -18,5 +18,5 @@
 }
 
 .cart-emoji:hover {
-  color: linear-gradient(45deg, #e85b3b, rgb(248, 36, 93));
+  color: red;
 }
