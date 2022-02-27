@@ -11,6 +11,7 @@ import ProductsContainer from "./components/productsContainer/ProductsContainer"
 import Cart from "./screens/cart/Cart"
 import EditForm from "./components/editForm/EditForm"
 import AddProduct from "./components/addProduct/AddProduct"
+import "./App.css"
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
@@ -32,16 +33,18 @@ function App() {
   return (
     <div>
       <Navbar logOut={logOut} currentUser={currentUser} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login setCurrentUser={setCurrentUser} />} />
-        <Route path="/signup" element={<SignUp setCurrentUser={setCurrentUser} />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/shopping-cart" element={<Cart />} />
-        <Route path="/products/:category" element={<ProductsContainer />} />
-        <Route path="/products/edit/:id" element={<EditForm />} />
-        <Route path="/products/add" element={<AddProduct />} />
-      </Routes>
+      <div className="page-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login setCurrentUser={setCurrentUser} />} />
+          <Route path="/signup" element={<SignUp setCurrentUser={setCurrentUser} />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/shopping-cart" element={<Cart />} />
+          <Route path="/products/:category" element={<ProductsContainer />} />
+          <Route path="/products/edit/:id" element={<EditForm />} />
+          <Route path="/products/add" element={<AddProduct />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   )

@@ -1,10 +1,31 @@
 .burger-menu {
-  bottom: 10vh;
+  bottom: 0;
   position: absolute;
   display: flex;
+  flex-direction: column-reverse;
+  width: 250px;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  justify-content: center;
+}
+
+.burger-text-container {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .burger-menu a {
   text-decoration: none;
-  color: black;
+  color: rgb(199, 196, 196);
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.burger-menu a:hover {
+  text-decoration: none;
+  color: red;
 }
