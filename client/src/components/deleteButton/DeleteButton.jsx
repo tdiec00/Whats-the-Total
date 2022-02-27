@@ -1,3 +1,18 @@
-export default function DeleteButton() {
-  return <button>Delete Product</button>
+import {deleteProduct} from "../../services/products"
+
+export default function DeleteButton(props) {
+  const handleSubmit = async () => {
+    await deleteProduct(props.product_id)
+    window.location.reload(false)
+  }
+
+  return (
+    <button
+      onClick={() => {
+        handleSubmit()
+      }}
+    >
+      Delete Product
+    </button>
+  )
 }

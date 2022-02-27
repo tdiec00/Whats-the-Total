@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom"
-
+import AddProductButton from "../addProductButton/AddProductButton"
 export default function Navbar(props) {
   return (
     <div>
@@ -8,6 +8,7 @@ export default function Navbar(props) {
           <Link to="/">Home</Link>
           <Link to="/shopping-cart">Shopping Cart</Link>
           <button onClick={props.logOut}>Logout</button>
+          <AddProductButton />
           <h3>Welcome, {props.currentUser.username}. Happy shopping!!</h3>
         </>
       ) : (
