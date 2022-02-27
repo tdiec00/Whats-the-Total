@@ -1,5 +1,19 @@
-import React from "react"
+import {useNavigate} from "react-router-dom"
 
 export default function AddProductButton() {
-  return <button>Add a New Product</button>
+  const navigate = useNavigate()
+
+  const handleSubmit = () => {
+    navigate("/products/add")
+  }
+
+  return (
+    <button
+      onClick={() => {
+        handleSubmit()
+      }}
+    >
+      Add a New Product
+    </button>
+  )
 }

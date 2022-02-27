@@ -10,6 +10,7 @@ import {verifyUser} from "./services/users"
 import ProductsContainer from "./components/productsContainer/ProductsContainer"
 import Cart from "./screens/cart/Cart"
 import EditForm from "./components/editForm/EditForm"
+import AddProduct from "./components/addProduct/AddProduct"
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
@@ -39,6 +40,7 @@ function App() {
         <Route path="/shopping-cart" element={<Cart />} />
         <Route path="/products/:category" element={<ProductsContainer />} />
         <Route path="/products/edit/:id" element={<EditForm />} />
+        <Route path="/products/add" element={<AddProduct />} />
       </Routes>
       <Footer />
     </div>
