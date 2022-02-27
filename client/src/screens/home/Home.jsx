@@ -1,13 +1,16 @@
 import {Link} from "react-router-dom"
 import CategoryNavContainer from "../../components/catgeoryNavContainer/CategoryNavContainer"
+import "./home.css"
+
 export default function Home() {
   return (
-    <div>
+    <div className="homeButtonContainer">
       <Link to="/signup">
-        <h1>SignUp</h1>
+        <button className="homeButton">Sign Up</button>
       </Link>
+      <br />
       <Link to="/login">
-        <h1>Login</h1>
+        <button className="homeButton">Login</button>
       </Link>
       <CategoryNavContainer />
     </div>

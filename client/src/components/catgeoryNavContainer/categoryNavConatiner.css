@@ -1,0 +1,10 @@
+.categoryNav {
+  bottom: 10vh;
+  position: absolute;
+  display: flex;
+}
+
+.categoryNav a {
+  text-decoration: none;
+  color: black;
+}

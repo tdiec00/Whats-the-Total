@@ -1,0 +1,23 @@
+.homeButton {
+  border: 3px solid #e85b3b;
+  /* background: linear-gradient(45deg, #e85b3b, rgb(232, 33, 86)); */
+  background: transparent;
+  margin: 5px;
+  width: 175px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.homeButton:hover {
+  background: linear-gradient(45deg, #e85b3b, rgb(248, 36, 93));
+}
+
+.homeButtonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+  justify-content: center;
+}

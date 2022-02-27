@@ -1,5 +1,9 @@
 .nav {
-  background-color: rgb(20, 138, 101);
+  background: linear-gradient(#e85b3b, rgb(248, 36, 93));
+  height: 75px;
+  top: 0;
+  position: absolute;
+  width: 100vw;
 }
 
 .nav a {
@@ -9,7 +13,7 @@
 
 .nav button {
   border: none;
-  background-color: rgb(20, 138, 101);
+  background-color: transparent;
 }
 
 .nav h3 {

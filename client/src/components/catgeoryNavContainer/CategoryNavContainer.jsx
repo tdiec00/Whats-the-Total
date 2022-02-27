@@ -1,8 +1,9 @@
 import {Link} from "react-router-dom"
+import "./categoryNavConatiner.css"
 
 export default function CategoryNavContainer() {
   return (
-    <div>
+    <div className="categoryNav">
       <div>
         <Link to="/products/fruits">Fruits</Link>
       </div>

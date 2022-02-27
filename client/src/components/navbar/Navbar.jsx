@@ -7,19 +7,17 @@ export default function Navbar(props) {
     <div className="nav">
       {props.currentUser ? (
         <>
-          <Link to="/">Home</Link>
+          <h4>Welcome, {props.currentUser.username}. Happy shopping!!</h4>
           <Link to="/shopping-cart">Shopping Cart</Link>
           <button onClick={props.logOut}>Logout</button>
           <AddProductButton />
-          <h3>Welcome, {props.currentUser.username}. Happy shopping!!</h3>
         </>
-      ) : (
-        <>
-          <Link to="/">Home</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Signup</Link>
-        </>
-      )}
+      ) : // <>
+      //   <Link to="/">Home</Link>
+      //   <Link to="/login">Login</Link>
+      //   <Link to="/signup">Signup</Link>
+      // </>
+      null}
     </div>
   )
 }

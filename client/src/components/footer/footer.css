@@ -2,3 +2,21 @@
   bottom: 0;
   position: absolute;
 }
+
+.footer svg {
+  height: 2em;
+  width: 2em;
+}
+
+/* .footer svg:hover {
+  fill: linear-gradient(45deg, #e85b3b, rgb(248, 36, 93));
+} */
+
+.cart-emoji {
+  background-color: transparent;
+  border: none;
+}
+
+.cart-emoji:hover {
+  color: linear-gradient(45deg, #e85b3b, rgb(248, 36, 93));
+}
