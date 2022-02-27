@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: row;
   box-shadow: 0px 0 5px rgba(0, 0, 0, 0.8);
-  height: 50px;
+  height: 6vh;
   align-items: center;
 }
 
@@ -13,10 +13,6 @@
   height: 2em;
   width: 2em;
 }
-
-/* .footer svg:hover {
-  fill: linear-gradient(45deg, #e85b3b, rgb(248, 36, 93));
-} */
 
 .emoji-container {
   position: absolute;
