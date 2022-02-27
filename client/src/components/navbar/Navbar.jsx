@@ -9,8 +9,10 @@ export default function Navbar(props) {
       {props.currentUser ? (
         <>
           <h4>Welcome, {props.currentUser.username}. Happy shopping!!</h4>
-          <button onClick={props.logOut}>Logout</button>
-          <AddProductButton />
+          <div>
+            <button onClick={props.logOut}>Logout</button>
+            <AddProductButton />
+          </div>
         </>
       ) : // <>
       //   <Link to="/">Home</Link>
