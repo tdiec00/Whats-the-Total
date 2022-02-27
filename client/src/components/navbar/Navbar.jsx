@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom"
 import AddProductButton from "../addProductButton/AddProductButton"
+
 import "./navbar.css"
 
 export default function Navbar(props) {
