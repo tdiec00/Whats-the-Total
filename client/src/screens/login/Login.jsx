@@ -1,6 +1,7 @@
 import {useState} from "react"
 import {useNavigate} from "react-router-dom"
 import {loginUser} from "../../services/users"
+import "./login.css"
 
 export default function Login(props) {
   const [username, setUsername] = useState("")
@@ -19,26 +20,28 @@ export default function Login(props) {
   }
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
-      <input
-        type="text"
-        value={username}
-        onChange={(e) => {
-          setUsername(e.target.value)
-        }}
-        placeholder="username"
-      />
-      <br />
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => {
-          setPassword(e.target.value.toString())
-        }}
-        placeholder="password must be 6 digits long"
-      />
-      <br />
-      <button>Login</button>
-    </form>
+    <div className="login-container">
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => {
+            setUsername(e.target.value)
+          }}
+          placeholder="username"
+        />
+        <br />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => {
+            setPassword(e.target.value.toString())
+          }}
+          placeholder="password must be 6 digits long"
+        />
+        <br />
+        <button>Login</button>
+      </form>
+    </div>
   )
 }
