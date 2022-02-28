@@ -5,6 +5,7 @@ import {addToCart} from "../../services/users"
 import {useNavigate} from "react-router-dom"
 import EditButton from "../editButton/EditButton"
 import DeleteButton from "../deleteButton/DeleteButton"
+import "./productsContainer.css"
 
 export default function ProductsContainer() {
   const [products, setProducts] = useState([])
@@ -26,7 +27,7 @@ export default function ProductsContainer() {
   }
 
   return (
-    <div>
+    <div className="products-page-container">
       {products.map((product, index) =>
         product.category == category ? (
           <div key={index}>

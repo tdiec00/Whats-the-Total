@@ -1,13 +1,13 @@
 .nav {
   background: linear-gradient(#e85b3b, rgb(248, 36, 93));
-  height: 75px;
+  height: 6vh;
   top: 0;
   width: 100vw;
   position: fixed;
   text-align: center;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
 }
 
 .nav a {
@@ -20,6 +20,12 @@
   background-color: transparent;
 }
 
-.nav h3 {
+.nav h4 {
   display: inline-block;
+  height: 20px;
+}
+
+.nav-text {
+  position: absolute;
+  left: 0;
 }
