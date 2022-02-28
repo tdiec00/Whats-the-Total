@@ -1,6 +1,7 @@
 import {useState} from "react"
 import {createProduct} from "../../services/products"
 import {useNavigate} from "react-router-dom"
+import "./addProduct.css"
 
 export default function AddProduct() {
   const [name, setName] = useState("")
@@ -25,40 +26,46 @@ export default function AddProduct() {
   }
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => {
-          setName(e.target.value)
-        }}
-        placeholder="name"
-      />
-      <input
-        type="number"
-        value={price}
-        onChange={(e) => {
-          setPrice(e.target.value)
-        }}
-        placeholder="price"
-      />
-      <select
-        defaultValue=""
-        onChange={(e) => {
-          handleChange(e)
-        }}
-      >
-        <option value="" disabled>
-          Choose a category
-        </option>
-        <option value="fruits">Fruits</option>
-        <option value="vegetables">Vegetables</option>
-        <option value="frozen">Frozen Foods</option>
-        <option value="drinks">Drinks</option>
-        <option value="meats">Meats</option>
-        <option value="dairy">Dairy</option>
-      </select>
-      <button>Add Product</button>
-    </form>
+    <div className="add-product-container">
+      <h3>Add a product</h3>
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value)
+          }}
+          placeholder="name"
+        />
+        <input
+          type="number"
+          value={price}
+          onChange={(e) => {
+            setPrice(e.target.value)
+          }}
+          placeholder="price"
+        />
+        <div className="dropdown">
+          <select
+            defaultValue=""
+            onChange={(e) => {
+              handleChange(e)
+            }}
+          >
+            <option value="" disabled>
+              Choose a category
+            </option>
+            <option value="fruits">Fruits</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="frozen">Frozen Foods</option>
+            <option value="drinks">Drinks</option>
+            <option value="meats">Meats</option>
+            <option value="dairy">Dairy</option>
+          </select>
+        </div>
+
+        <button>Add Product</button>
+      </form>
+    </div>
   )
 }

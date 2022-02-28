@@ -27,10 +27,10 @@ export default function ProductsContainer() {
   }
 
   return (
-    <div className="products-page-container">
+    <div className="products-content-container">
       {products.map((product, index) =>
         product.category == category ? (
-          <div key={index}>
+          <div key={index} className="product-card">
             <h1>{product.name}</h1>
             <h3>${product.price.toFixed(2)}</h3>
             <button onClick={() => handleSubmit(product.id)}>Add to Cart</button>

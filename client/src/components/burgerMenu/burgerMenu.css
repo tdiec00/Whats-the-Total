@@ -5,9 +5,10 @@
   flex-direction: column-reverse;
   width: 250px;
   right: 0;
+  margin-bottom: 6vh;
   text-align: center;
   padding: 10px;
-  height: 100vh;
+  height: 94vh;
   background-color: rgba(0, 0, 0, 0.75);
   justify-content: center;
 }

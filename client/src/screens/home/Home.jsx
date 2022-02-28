@@ -1,6 +1,6 @@
 import {useState} from "react"
 import {useNavigate} from "react-router-dom"
-import Modal from "../../components/modal/Modal"
+import UserModal from "../../components/userModal/UserModal"
 import {loginUser, registerUser} from "../../services/users"
 import "./home.css"
 
@@ -51,7 +51,7 @@ export default function Home(props) {
         Login
       </button>
 
-      <Modal
+      <UserModal
         setEmail={setEmail}
         setIs_Admin={setIs_Admin}
         setIs_Customer={setIs_Customer}

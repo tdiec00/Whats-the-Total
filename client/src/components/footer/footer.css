@@ -7,17 +7,12 @@
   box-shadow: 0px 0 5px rgba(0, 0, 0, 0.8);
   height: 6vh;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .footer svg {
   height: 2em;
   width: 2em;
-}
-
-.emoji-container {
-  position: absolute;
-  right: 0;
-  bottom: 8px;
 }
 
 .cart-emoji {
@@ -31,4 +26,47 @@
 
 .burgerContainer {
   right: 0;
+}
+
+@keyframes ease-in {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 250px;
+  }
+}
+
+.ease-in {
+  animation-name: ease-in;
+  animation-duration: 1s;
+  z-index: 1;
+}
+
+.ease-out {
+  display: none;
+}
+
+.logout {
+  display: flex;
+}
+
+.footer button {
+  border: none;
+  background-color: transparent;
+  margin-right: 20px;
+}
+
+.footer-text-button {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.footer-text-button:hover {
+  color: red;
+}
+
+.nav-text {
+  position: absolute;
+  left: 20px;
 }

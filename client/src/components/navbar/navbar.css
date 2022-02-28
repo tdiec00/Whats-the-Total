@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
 
 .nav a {
@@ -15,17 +16,7 @@
   color: black;
 }
 
-.nav button {
-  border: none;
-  background-color: transparent;
-}
-
 .nav h4 {
   display: inline-block;
   height: 20px;
-}
-
-.nav-text {
-  position: absolute;
-  left: 0;
 }

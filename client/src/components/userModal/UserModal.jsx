@@ -1,8 +1,8 @@
 import Login from "../../screens/login/Login"
 import SignUp from "../../screens/signup/SignUp"
-import "./modal.css"
+import "./userModal.css"
 
-export default function Modal(props) {
+export default function UserModal(props) {
   // if (!props.toggleLogin) {
   //   return null
   // }
@@ -28,7 +28,7 @@ export default function Modal(props) {
             </div>
           </div>
         </div>
-      ) : props.toggleSignup == true ? (
+      ) : props.toggleSignup ? (
         <div className="modal" onClick={() => props.setToggleSignup((prevToggle) => !prevToggle)}>
           <div className="modal-content modal-content-signup" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header modal-header-signup">

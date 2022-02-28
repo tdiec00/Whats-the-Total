@@ -9,11 +9,12 @@ export default function AddProductButton() {
 
   return (
     <button
+      className="footer-text-button"
       onClick={() => {
         handleSubmit()
       }}
     >
-      Add a New Product
+      Add a Product
     </button>
   )
 }

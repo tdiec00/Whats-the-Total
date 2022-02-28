@@ -1,3 +1,26 @@
-.products-page-container {
-  margin-top: 50px;
+.page-container {
+  display: flex;
+  justify-content: center;
+}
+
+.products-content-container {
+  display: flex;
+  max-width: 1200px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 8vh;
+}
+
+.product-card {
+  border: 1px solid red;
+  margin: 15px;
+  border: 2px solid #e85b3b;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+}
+
+.product-card button {
+  margin: 10px;
 }
