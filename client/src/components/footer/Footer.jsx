@@ -14,6 +14,7 @@ export default function Footer() {
     setToggle((prevToggle) => !prevToggle)
   }
 
+  const toggleClass = toggle ? "ease-out" : "ease-in"
   const handleNavigate = () => {
     navigate("/shopping-cart")
   }
@@ -23,7 +24,7 @@ export default function Footer() {
       <button className="cart-emoji" onClick={handleNavigate}>
         <FaShoppingCart />
       </button>
-      <BurgerMenu />
+      <BurgerMenu className={toggleClass} />
       <div className="emoji-container">
         <button className="cart-emoji" onClick={handleToggle}>
           <GiHamburgerMenu />

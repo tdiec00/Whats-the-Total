@@ -1,15 +1,32 @@
 import {useState} from "react"
-import {Link, useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import Modal from "../../components/modal/Modal"
-import {loginUser} from "../../services/users"
+import {loginUser, registerUser} from "../../services/users"
 import "./home.css"
 
 export default function Home(props) {
   const [toggleLogin, setToggleLogin] = useState(false)
-  const [toggleSignUp, setToggleSignUp] = useState(false)
+  const [toggleSignup, setToggleSignup] = useState(false)
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const [email, setEmail] = useState("")
+  const [is_admin, setIs_Admin] = useState(false)
+  const [is_customer, setIs_Customer] = useState(false)
   const navigate = useNavigate()
+
+  const handleSignUp = async (e) => {
+    e.preventDefault()
+    const newUser = {
+      username,
+      email,
+      password,
+      is_admin,
+      is_customer,
+    }
+    const resp = await registerUser(newUser)
+    props.setCurrentUser(resp)
+    navigate("/products")
+  }
 
   const handleLogin = async (e) => {
     e.preventDefault()
@@ -24,9 +41,10 @@ export default function Home(props) {
 
   return (
     <div className="homeButtonContainer">
-      <Link to="/signup">
-        <button className="homeButton">Sign Up</button>
-      </Link>
+      <button className="homeButton" onClick={() => setToggleSignup((prevToggle) => !prevToggle)}>
+        Sign Up
+      </button>
+
       <br />
 
       <button className="homeButton" onClick={() => setToggleLogin((prevToggle) => !prevToggle)}>
@@ -34,8 +52,12 @@ export default function Home(props) {
       </button>
 
       <Modal
-        toggleSignUp={toggleSignUp}
-        setToggleSignUp={setToggleSignUp}
+        setEmail={setEmail}
+        setIs_Admin={setIs_Admin}
+        setIs_Customer={setIs_Customer}
+        handleSignUp={handleSignUp}
+        toggleSignup={toggleSignup}
+        setToggleSignup={setToggleSignup}
         toggleLogin={toggleLogin}
         setToggleLogin={setToggleLogin}
         setCurrentUser={props.setCurrentUser}
