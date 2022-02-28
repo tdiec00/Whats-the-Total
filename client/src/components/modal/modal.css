@@ -13,7 +13,7 @@
 .modal-content {
   width: 500px;
   background-color: #fff;
-  border: 1px solid #e85b3b;
+  border: 2px solid #e85b3b;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
@@ -31,6 +31,4 @@
 
 .modal-body {
   padding: 10px;
-  border-top: 1px solid#eee;
-  border-bottom: 1px solid #eee;
 }

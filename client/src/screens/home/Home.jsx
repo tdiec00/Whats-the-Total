@@ -5,12 +5,13 @@ import {loginUser} from "../../services/users"
 import "./home.css"
 
 export default function Home(props) {
-  const [toggle, setToggle] = useState(false)
+  const [toggleLogin, setToggleLogin] = useState(false)
+  const [toggleSignUp, setToggleSignUp] = useState(false)
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const navigate = useNavigate()
 
-  const handleSubmit = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault()
     const newUser = {
       username,
@@ -28,15 +29,17 @@ export default function Home(props) {
       </Link>
       <br />
 
-      <button className="homeButton" onClick={() => setToggle((prevToggle) => !prevToggle)}>
+      <button className="homeButton" onClick={() => setToggleLogin((prevToggle) => !prevToggle)}>
         Login
       </button>
 
       <Modal
-        toggle={toggle}
-        setToggle={setToggle}
+        toggleSignUp={toggleSignUp}
+        setToggleSignUp={setToggleSignUp}
+        toggleLogin={toggleLogin}
+        setToggleLogin={setToggleLogin}
         setCurrentUser={props.setCurrentUser}
-        handleSubmit={handleSubmit}
+        handleLogin={handleLogin}
         setUsername={setUsername}
         setPassword={setPassword}
         username={username}
