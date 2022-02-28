@@ -1,13 +1,11 @@
 .login-container {
   width: 300px;
   height: 300px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border-radius: 20px;
+
   flex-direction: column;
-  border: 1px solid #e85b3b;
 }
 
 .page-container {
@@ -17,9 +15,9 @@
   background-color: rgba(112, 114, 117, 0.75);
 }
 
-.login-container {
+/* .login-container {
   background-color: white;
-}
+} */
 
 .login-container button {
   border: 3px solid #e85b3b;

@@ -35,8 +35,8 @@ function App() {
       <Navbar logOut={logOut} currentUser={currentUser} />
       <div className="page-container">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login setCurrentUser={setCurrentUser} />} />
+          <Route path="/" element={<Home setCurrentUser={setCurrentUser} />} />
+          {/* <Route path="/login" element={<Login setCurrentUser={setCurrentUser} />} /> */}
           <Route path="/signup" element={<SignUp setCurrentUser={setCurrentUser} />} />
           <Route path="/products" element={<Products />} />
           <Route path="/shopping-cart" element={<Cart />} />
