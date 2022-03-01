@@ -86,9 +86,34 @@
   display: flex;
   width: 500px;
   justify-content: end;
-  margin-right: 10px;
+  margin-right: 15px;
   bottom: 0;
   position: absolute;
   margin-bottom: 6vh;
   font-weight: bold;
+}
+
+.checkout-button {
+  display: flex;
+  width: 500px;
+  justify-content: end;
+  margin-top: 15px;
+}
+
+.checkout-button button {
+  border: 1px solid #e85b3b;
+  background-color: transparent;
+  margin-right: 20px;
+  border-radius: 20px;
+  padding: 5px 2px 5px 2px;
+  font-weight: bold;
+  font-size: 12px;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+}
+
+.checkout-button button:hover {
+  background: linear-gradient(45deg, #e85b3b, rgb(232, 33, 86, 0.7));
 }

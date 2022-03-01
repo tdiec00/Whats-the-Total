@@ -47,7 +47,6 @@ export default function ShoppingCartContainer() {
                 <div className="cart-text-container-2">
                   <h4>${product.price.toFixed(2)}</h4>
                 </div>
-
                 <div className="cart-button-container">
                   <button onClick={() => handleDelete(product.id)}>Remove</button>
                 </div>
@@ -56,7 +55,9 @@ export default function ShoppingCartContainer() {
           })
         )}
       </div>
-      <CheckoutButton />
+      <div className="checkout-button">
+        <CheckoutButton />
+      </div>
       <ShoppingTotal products={products} />
     </div>
   )

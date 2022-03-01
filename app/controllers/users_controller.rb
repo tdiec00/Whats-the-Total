@@ -17,33 +17,32 @@ class UsersController < ApplicationController
  
 
   def add_product
-    @single_user = User.find(params[:id])
-    p @single_user, "hello"
-    @new_product = Product.find(params[:product_id])
-    @single_user.products << @new_product
-    render json: @single_user.products.all
+    @user = User.find(params[:id])
+    @product = Product.find(params[:product_id])
+    @user.products << @product
+    render json: @user.products.all
   end
 
   def delete_product
-    @single_user1 = User.find(params[:id])
-    @single_product = Product.find(params[:product_id])
-    index = @single_product.id
-    @array = @single_user1.products.find_all{|i| i.id == index}
+    @user = User.find(params[:id])
+    @user = Product.find(params[:product_id])
+    index = @product.id
+    @array = @user.products.find_all{|i| i.id == index}
     @array.pop
-    @single_user1.products.delete(params[:product_id])
-    @single_user1.products << @array
-    render json: @single_user1.products
+    @user.products.delete(params[:product_id])
+    @user.products << @array
+    render json: @user.products
   end
 
    def get_all_products
-     @single_user2 = User.find(params[:id])
-     @all_products = @single_user2.products.all
-     render json: @all_products
+     @user = User.find(params[:id])
+     @products = @user.products.all
+     render json: @products
   end
 
   def remove_all
-    @single_user3 = User.find(params[:id])
-    @single_user3.products.destroy_all
+    @user = User.find(params[:id])
+    @user.products.destroy_all
   end
 
   # POST /users
