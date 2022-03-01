@@ -16,27 +16,27 @@ export default function Products() {
       </div>
       <div className="categories-container">
         <div className="category-container">
-          <img src={fruit} alt="image of fruits" onClick={() => navigate("/products/fruits")}></img>
+          <img src={fruit} alt="fruits" onClick={() => navigate("/products/fruits")}></img>
           <Link to="/products/fruits">Fruits</Link>
         </div>
         <div className="category-container">
-          <img src={vegetables} alt="image of vegetables" onClick={() => navigate("/products/vegetables")}></img>
+          <img src={vegetables} alt="vegetables" onClick={() => navigate("/products/vegetables")}></img>
           <Link to="/products/vegetables">Vegetables</Link>
         </div>
         <div className="category-container">
-          <img src={frozen} alt="image of freezers" onClick={() => navigate("/products/frozen")}></img>
+          <img src={frozen} alt="freezers" onClick={() => navigate("/products/frozen")}></img>
           <Link to="/products/frozen">Frozen Foods</Link>
         </div>
         <div className="category-container">
-          <img src={beverages} alt="image of beverages" onClick={() => navigate("/products/drinks")}></img>
+          <img src={beverages} alt="beverages" onClick={() => navigate("/products/drinks")}></img>
           <Link to="/products/drinks">Drinks</Link>
         </div>
         <div className="category-container">
-          <img src={meats} alt="image of meats" onClick={() => navigate("/products/meats")}></img>
+          <img src={meats} alt="meats" onClick={() => navigate("/products/meats")}></img>
           <Link to="/products/meats">Meats</Link>
         </div>
         <div className="category-container">
-          <img src={dairy} alt="image of dairy" onClick={() => navigate("/products/dairy")}></img>
+          <img src={dairy} alt="dairy" onClick={() => navigate("/products/dairy")}></img>
           <Link to="/products/dairy">Dairy</Link>
         </div>
       </div>

@@ -8,7 +8,6 @@ import {verifyUser} from "./services/users"
 import ProductsContainer from "./components/productsContainer/ProductsContainer"
 import Cart from "./screens/cart/Cart"
 import EditForm from "./components/editForm/EditForm"
-import AddProduct from "./components/addProduct/AddProduct"
 import ProductModal from "./components/productModal/ProductModal"
 import "./App.css"
 

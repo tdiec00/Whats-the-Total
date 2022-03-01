@@ -17,7 +17,7 @@ export default function EditForm() {
       setPrice(product.price)
     }
     fetchProduct()
-  }, [])
+  }, [id])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
