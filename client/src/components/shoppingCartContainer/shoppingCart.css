@@ -86,7 +86,7 @@
 .total-container {
   display: flex;
   width: 500px;
-  justify-content: end;
+  justify-content: flex-end;
   margin-right: 15px;
   bottom: 0;
   position: absolute;
@@ -97,7 +97,7 @@
 .checkout-button {
   display: flex;
   width: 500px;
-  justify-content: end;
+  justify-content: flex-end;
   margin-top: 15px;
 }
 
