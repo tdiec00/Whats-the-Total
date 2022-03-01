@@ -35,7 +35,7 @@ export default function ShoppingCartContainer() {
             <h4>Price</h4>
           </div>
         </div>
-        {products.length == 0 ? (
+        {products.length === 0 ? (
           <h5 className="cart-title">Your shopping Cart is empty. Please continue shopping</h5>
         ) : (
           products.map((product, index) => {
