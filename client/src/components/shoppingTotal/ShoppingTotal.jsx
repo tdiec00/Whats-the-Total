@@ -3,5 +3,9 @@ export default function ShoppingTotal(props) {
   props.products.forEach((product) => {
     total += product.price
   })
-  return <div>Your Total: ${total.toFixed(2)}</div>
+  return (
+    <div className="total-container">
+      <p>Your Total: ${total.toFixed(2)}</p>
+    </div>
+  )
 }

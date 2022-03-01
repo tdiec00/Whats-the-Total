@@ -2,6 +2,7 @@ import {useState, useEffect} from "react"
 import {getUserProducts} from "../../services/users"
 import {deleteFromCart} from "../../services/users"
 import ShoppingTotal from "../shoppingTotal/ShoppingTotal"
+import "./shoppingCart.css"
 
 export default function ShoppingCartContainer() {
   const [products, setProducts] = useState([])
@@ -22,20 +23,38 @@ export default function ShoppingCartContainer() {
   }
 
   return (
-    <div>
-      {products.length == 0 ? (
-        <h1>Your shopping Cart is empty. Please continue shopping</h1>
-      ) : (
-        products.map((product, index) => {
-          return (
-            <div key={index}>
-              <h1>{product.name}</h1>
-              <h3>${product.price.toFixed(2)}</h3>
-              <button onClick={() => handleDelete(product.id)}>Remove From Cart</button>
-            </div>
-          )
-        })
-      )}
+    <div className="shopping-cart">
+      <h4>Your Shopping Cart</h4>
+      <div>
+        <div className="headers-container">
+          <div className="cart-headers1">
+            <h4>Product</h4>
+          </div>
+          <div className="cart-headers2">
+            <h4>Price</h4>
+          </div>
+        </div>
+        {products.length == 0 ? (
+          <h5 className="cart-title">Your shopping Cart is empty. Please continue shopping</h5>
+        ) : (
+          products.map((product, index) => {
+            return (
+              <div key={index} className="cart-container">
+                <div className="cart-text-container">
+                  <h4>{product.name}</h4>
+                </div>
+                <div className="cart-text-container-2">
+                  <h4>${product.price.toFixed(2)}</h4>
+                </div>
+
+                <div className="cart-button-container">
+                  <button onClick={() => handleDelete(product.id)}>Remove</button>
+                </div>
+              </div>
+            )
+          })
+        )}
+      </div>
       <ShoppingTotal products={products} />
     </div>
   )

@@ -24,7 +24,7 @@ export default function ProductsContainer() {
   const handleSubmit = async (product_id) => {
     const id = localStorage.getItem("id")
     await addToCart(id, product_id)
-    navigate("/shopping-cart")
+    alert("Product Added")
   }
 
   return (
