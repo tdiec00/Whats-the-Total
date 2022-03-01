@@ -36,13 +36,15 @@ class UsersController < ApplicationController
 
    def get_all_products
      @user = User.find(params[:id])
-     @products = @user.products.all
+     @products = @user.products
      render json: @products
   end
 
   def remove_all
     @user = User.find(params[:id])
-    @user.products.destroy_all
+    @user.products = []
+    @user.save
+    render json: @user.products
   end
 
   # POST /users
