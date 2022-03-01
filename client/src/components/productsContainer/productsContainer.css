@@ -64,3 +64,19 @@
   align-items: center;
   max-width: 400px;
 }
+
+@media (max-width: 700px) {
+  .product-card {
+    width: 320px;
+  }
+  .product-card img {
+    margin-top: 15px;
+    width: 250px;
+  }
+  .product-card button {
+    font-size: 11px;
+  }
+  .product-text-container p {
+    font-size: 15px;
+  }
+}

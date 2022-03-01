@@ -6,5 +6,5 @@ export default function DeleteButton(props) {
     window.location.reload(false)
   }
 
-  return <button onClick={() => handleSubmit()}>Delete Product</button>
+  return <button onClick={() => handleSubmit()}>Delete</button>
 }

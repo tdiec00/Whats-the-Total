@@ -51,3 +51,13 @@ input::-webkit-inner-spin-button {
 .add-product-container input:focus::placeholder {
   color: transparent;
 }
+
+.add-product-container option {
+  position: absolute;
+}
+
+@media (max-width: 700px) {
+  .add-product-container button {
+    font-size: 12px;
+  }
+}
