@@ -11,7 +11,9 @@ export default function Products() {
   const navigate = useNavigate()
   return (
     <div>
-      <h1>Explore our various category of products</h1>
+      <div className="products-h1-container">
+        <h1>Explore our various category of products</h1>
+      </div>
       <div className="categories-container">
         <div className="category-container">
           <img src={fruit} alt="image of fruits" onClick={() => navigate("/products/fruits")}></img>

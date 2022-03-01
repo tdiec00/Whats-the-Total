@@ -38,7 +38,7 @@
 }
 
 .product-card button:hover {
-  background: linear-gradient(45deg, #e85b3b, rgb(232, 33, 86, 0.75));
+  background: linear-gradient(45deg, #e85b3b, rgb(232, 33, 86, 0.9));
 }
 
 .product-card img {
@@ -48,10 +48,11 @@
 
 .product-text-container {
   display: flex;
+  justify-content: space-between;
+  margin: 0 30px 0 30px;
 }
 
 .product-text-container p {
-  margin-left: 100px;
   font-weight: bold;
   height: 20px;
 }

@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .categories-container a {
@@ -35,10 +36,8 @@
   cursor: pointer;
 }
 
-.page-container h1 {
-  margin-top: 75px;
-}
-
 .page-container {
   text-align: center;
+  display: flex;
+  align-items: center;
 }
