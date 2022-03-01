@@ -32,7 +32,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="main-body">
       <Navbar logOut={logOut} currentUser={currentUser} />
       <div className="page-container">
         <Routes>

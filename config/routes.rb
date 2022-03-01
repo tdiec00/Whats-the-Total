@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   post '/users/:id/:product_id', to: 'users#add_product'
   delete '/users/:id/:product_id', to: 'users#delete_product'
   get '/users/:id/products', to: 'users#get_all_products'
-  
+  delete '/users/:id/products', to: 'users#remove_all'
+
   resources :users 
   resources :products
  

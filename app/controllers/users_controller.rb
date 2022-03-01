@@ -41,6 +41,11 @@ class UsersController < ApplicationController
      render json: @all_products
   end
 
+  def remove_all
+    @single_user3 = User.find(params[:id])
+    @single_user3.products.destroy_all
+  end
+
   # POST /users
   def create
     @user = User.new(user_params)

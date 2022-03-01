@@ -8,13 +8,15 @@ export default function AddProductButton() {
   }
 
   return (
-    <button
-      className="footer-text-button"
-      onClick={() => {
-        handleSubmit()
-      }}
-    >
-      Add a Product
-    </button>
+    <>
+      <button
+        className="footer-text-button"
+        onClick={() => {
+          handleSubmit()
+        }}
+      >
+        Add a Product
+      </button>
+    </>
   )
 }

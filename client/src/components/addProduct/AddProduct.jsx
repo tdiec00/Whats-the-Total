@@ -63,8 +63,10 @@ export default function AddProduct() {
             <option value="dairy">Dairy</option>
           </select>
         </div>
-
         <button>Add Product</button>
+        <button className="nav-button" onClick={() => navigate("/products")}>
+          Product Categories
+        </button>
       </form>
     </div>
   )

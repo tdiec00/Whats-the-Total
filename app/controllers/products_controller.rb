@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show update destroy ]
 
+
   # GET /products
   def index
     @products = Product.all
@@ -32,6 +33,7 @@ class ProductsController < ApplicationController
       render json: @product.errors, status: :unprocessable_entity
     end
   end
+
 
   # DELETE /products/1
   def destroy
