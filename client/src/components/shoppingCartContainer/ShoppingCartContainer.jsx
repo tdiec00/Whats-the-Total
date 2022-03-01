@@ -2,6 +2,7 @@ import {useState, useEffect} from "react"
 import {getUserProducts} from "../../services/users"
 import {deleteFromCart} from "../../services/users"
 import ShoppingTotal from "../shoppingTotal/ShoppingTotal"
+import CheckoutButton from "../checkoutButton/CheckoutButton"
 import "./shoppingCart.css"
 
 export default function ShoppingCartContainer() {
@@ -55,6 +56,7 @@ export default function ShoppingCartContainer() {
           })
         )}
       </div>
+      <CheckoutButton />
       <ShoppingTotal products={products} />
     </div>
   )
