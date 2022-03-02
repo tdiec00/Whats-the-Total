@@ -7,7 +7,8 @@ import "./shoppingCart.css"
 
 export default function ShoppingCartContainer() {
   const [products, setProducts] = useState([])
-  const [number, setNumber] = useState([])
+  //testing component
+  // const [number, setNumber] = useState([])
 
   useEffect(() => {
     const fetchProducts = async () => {
