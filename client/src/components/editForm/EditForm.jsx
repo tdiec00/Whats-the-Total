@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react"
-import {updateProduct, getOneProduct} from "../../../services/products"
+import {updateProduct, getOneProduct} from "../../services/products"
 import {useParams, useNavigate} from "react-router-dom"
 
 export default function EditForm() {

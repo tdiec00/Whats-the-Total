@@ -19,36 +19,38 @@ export default function ShoppingCartContainer() {
     }
     fetchProducts()
   }, [])
-  console.log(arr, "arr")
+
   const handleDelete = async (product_id) => {
     const id = localStorage.getItem("id")
     await deleteFromCart(id, product_id)
     window.location.reload(false)
   }
-  console.log(number)
-  const countUp = (e, index) => {
-    e.preventDefault()
-    arr[index] += 1
-    console.log(arr)
-    arr.filter((num, i) => {
-      if (i == index) {
-        defaultNum = arr[index]
-      }
-      console.log(defaultNum)
-    })
-    setNumber(arr)
-  }
-  console.log(number, "outside")
-  const countDown = (e, index) => {
-    e.preventDefault()
-    if (number[index] <= 0) {
-      arr[index] = 0
-      setNumber(arr)
-    } else {
-      arr[index] -= 1
-      setNumber(arr)
-    }
-  }
+
+  // Working on this component. Does not work yet
+
+  // const countUp = (e, index) => {
+  //   e.preventDefault()
+  //   arr[index] += 1
+  //   console.log(arr)
+  //   arr.filter((num, i) => {
+  //     if (i === index) {
+  //       defaultNum = arr[index]
+  //     }
+  //     console.log(defaultNum)
+  //   })
+  //   setNumber(arr)
+  // }
+
+  // const countDown = (e, index) => {
+  //   e.preventDefault()
+  //   if (number[index] <= 0) {
+  //     arr[index] = 0
+  //     setNumber(arr)
+  //   } else {
+  //     arr[index] -= 1
+  //     setNumber(arr)
+  //   }
+  // }
 
   return (
     <div className="shopping-cart">

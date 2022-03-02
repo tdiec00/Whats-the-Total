@@ -1,4 +1,4 @@
-import EditForm from "../editButton/editForm/EditForm"
+import EditForm from "../editForm/EditForm"
 import "./editProductModal.css"
 
 export default function EditProductModal(props) {
