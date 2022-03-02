@@ -15,7 +15,8 @@ export default function ShoppingCartContainer() {
       const id = localStorage.getItem("id")
       const products = await getUserProducts(id)
       setProducts(products)
-      setNumber(new Array(products.length).fill(0))
+      //testingcomponent
+      // setNumber(new Array(products.length).fill(0))
     }
     fetchProducts()
   }, [])
