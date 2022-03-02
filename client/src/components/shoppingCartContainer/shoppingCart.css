@@ -10,14 +10,13 @@
 .cart-text-container {
   margin-top: 12px;
   display: flex;
-  width: 30vw;
   margin-left: 10px;
 }
 
 .cart-text-container-2 {
   margin-top: 12px;
   position: absolute;
-  margin-left: 250px;
+  margin-left: 125px;
 }
 
 .headers-container {
@@ -41,7 +40,7 @@
 }
 
 .cart-headers2 h4 {
-  margin-left: 180px;
+  margin-left: 55px;
   margin-bottom: 8px;
 }
 
@@ -117,6 +116,31 @@
 
 .checkout-button button:hover {
   background: linear-gradient(45deg, #e85b3b, rgb(232, 33, 86, 0.7));
+}
+
+.counter {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 220px;
+}
+
+.counter button {
+  background-color: transparent;
+  height: 25px;
+  border: 2px solid rgb(206, 205, 205);
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  background-color: rgb(228, 228, 228);
+}
+
+.counter p {
+  padding: 3px;
+  font-weight: bold;
+  background-color: rgb(190, 190, 190);
 }
 
 @media (max-width: 700px) {

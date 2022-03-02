@@ -23,6 +23,18 @@ export default function ShoppingCartContainer() {
     window.location.reload(false)
   }
 
+  const countUp = (num) => {
+    num += 1
+  }
+
+  const countDown = (num) => {
+    if (num <= 0) {
+      num = 0
+    } else {
+      num += 1
+    }
+  }
+
   return (
     <div className="shopping-cart">
       <h4>Your Shopping Cart</h4>
@@ -47,7 +59,11 @@ export default function ShoppingCartContainer() {
                 <div className="cart-text-container-2">
                   <h4>${product.price.toFixed(2)}</h4>
                 </div>
-
+                <div className="counter">
+                  <button onClick={() => countDown(num)}>-</button>
+                  <p>{num}</p>
+                  <button onClick={() => countUp(num)}>+</button>
+                </div>
                 <div className="cart-button-container">
                   <button onClick={() => handleDelete(product.id)}>Remove</button>
                 </div>

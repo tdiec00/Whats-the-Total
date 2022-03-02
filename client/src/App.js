@@ -43,7 +43,7 @@ function App() {
           <Route path="/products/add" element={<ProductModal />} />
         </Routes>
       </div>
-      <Footer logOut={logOut} />
+      <Footer logOut={logOut} currentUser={currentUser} />
     </div>
   )
 }

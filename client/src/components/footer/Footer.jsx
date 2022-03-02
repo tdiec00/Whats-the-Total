@@ -10,9 +10,18 @@ export default function Footer(props) {
   //eslint-disable-next-line
   const [toggle, setToggle] = useState(false)
   const navigate = useNavigate()
+  const path = window.location.pathname
 
   const handleToggle = () => {
     setToggle((prevToggle) => !prevToggle)
+  }
+
+  const loginNav = () => {
+    if (path === "/") {
+      alert("Please Click the Login button in the middle.")
+    } else {
+      navigate("/")
+    }
   }
 
   const toggleClass = toggle ? "ease-in" : "ease-out"
@@ -21,27 +30,53 @@ export default function Footer(props) {
   }
 
   return (
-    <div className="footer">
-      <div className="nav-text">
-        <AddProductButton />
-        <button className="footer-text-button" onClick={props.logOut}>
-          Logout
-        </button>
-      </div>
+    <>
+      {props.currentUser ? (
+        <div className="footer">
+          <div className="nav-text">
+            <AddProductButton />
+            <button className="footer-text-button" onClick={props.logOut}>
+              Logout
+            </button>
+          </div>
 
-      <div className="cart-emoji-container">
-        <button className="cart-emoji" onClick={handleNavigate}>
-          <FaShoppingCart />
-        </button>
-      </div>
-      <div>
-        <div className="emoji-container">
-          <BurgerMenu toggleClass={toggleClass} handleToggle={handleToggle} />
-          <button className="cart-emoji" onClick={handleToggle}>
-            <GiHamburgerMenu />
-          </button>
+          <div className="cart-emoji-container">
+            <button className="cart-emoji" onClick={handleNavigate}>
+              <FaShoppingCart />
+            </button>
+          </div>
+          <div>
+            <div className="emoji-container">
+              <BurgerMenu toggleClass={toggleClass} handleToggle={handleToggle} />
+              <button className="cart-emoji" onClick={handleToggle}>
+                <GiHamburgerMenu />
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      ) : (
+        <div className="footer">
+          <div className="nav-text">
+            <button className="footer-text-button" onClick={() => loginNav()}>
+              Login
+            </button>
+          </div>
+
+          <div className="cart-emoji-container">
+            <button className="cart-emoji" onClick={handleNavigate}>
+              <FaShoppingCart />
+            </button>
+          </div>
+          <div>
+            <div className="emoji-container">
+              <BurgerMenu toggleClass={toggleClass} handleToggle={handleToggle} />
+              <button className="cart-emoji" onClick={handleToggle}>
+                <GiHamburgerMenu />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   )
 }
