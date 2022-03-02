@@ -7,31 +7,46 @@ import "./shoppingCart.css"
 
 export default function ShoppingCartContainer() {
   const [products, setProducts] = useState([])
-
+  const [number, setNumber] = useState([])
+  const arr = number
+  let defaultNum = 0
   useEffect(() => {
     const fetchProducts = async () => {
       const id = localStorage.getItem("id")
       const products = await getUserProducts(id)
       setProducts(products)
+      setNumber(new Array(products.length).fill(0))
     }
     fetchProducts()
   }, [])
-
+  console.log(arr, "arr")
   const handleDelete = async (product_id) => {
     const id = localStorage.getItem("id")
     await deleteFromCart(id, product_id)
     window.location.reload(false)
   }
-
-  const countUp = (num) => {
-    num += 1
+  console.log(number)
+  const countUp = (e, index) => {
+    e.preventDefault()
+    arr[index] += 1
+    console.log(arr)
+    arr.filter((num, i) => {
+      if (i == index) {
+        defaultNum = arr[index]
+      }
+      console.log(defaultNum)
+    })
+    setNumber(arr)
   }
-
-  const countDown = (num) => {
-    if (num <= 0) {
-      num = 0
+  console.log(number, "outside")
+  const countDown = (e, index) => {
+    e.preventDefault()
+    if (number[index] <= 0) {
+      arr[index] = 0
+      setNumber(arr)
     } else {
-      num += 1
+      arr[index] -= 1
+      setNumber(arr)
     }
   }
 
@@ -59,11 +74,11 @@ export default function ShoppingCartContainer() {
                 <div className="cart-text-container-2">
                   <h4>${product.price.toFixed(2)}</h4>
                 </div>
-                <div className="counter">
-                  <button onClick={() => countDown(num)}>-</button>
-                  <p>{num}</p>
-                  <button onClick={() => countUp(num)}>+</button>
-                </div>
+                {/* <div className="counter">
+                  {number && <button onClick={(e) => countDown(e, index)}>-</button>}
+                  <p>{defaultNum}</p>
+                  {number && <button onClick={(e) => countUp(e, index)}>+</button>}
+                </div> */}
                 <div className="cart-button-container">
                   <button onClick={() => handleDelete(product.id)}>Remove</button>
                 </div>

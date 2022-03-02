@@ -7,7 +7,7 @@ import Products from "./screens/products/Products"
 import {verifyUser} from "./services/users"
 import ProductsContainer from "./components/productsContainer/ProductsContainer"
 import Cart from "./screens/cart/Cart"
-import EditForm from "./components/editForm/EditForm"
+import EditProductModal from "./components/editProductModal/EditProductModal"
 import ProductModal from "./components/productModal/ProductModal"
 import "./App.css"
 
@@ -39,7 +39,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/shopping-cart" element={<Cart />} />
           <Route path="/products/:category" element={<ProductsContainer />} />
-          <Route path="/products/edit/:id" element={<EditForm />} />
+          <Route path="/products/edit/:id" element={<EditProductModal />} />
           <Route path="/products/add" element={<ProductModal />} />
         </Routes>
       </div>

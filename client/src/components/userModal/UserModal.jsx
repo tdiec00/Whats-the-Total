@@ -3,10 +3,6 @@ import SignUp from "../../screens/signup/SignUp"
 import "./userModal.css"
 
 export default function UserModal(props) {
-  // if (!props.toggleLogin) {
-  //   return null
-  // }
-  console.log(props.toggleSignup)
   return (
     <div>
       {props.toggleLogin ? (
@@ -53,9 +49,7 @@ export default function UserModal(props) {
             </div>
           </div>
         </div>
-      ) : (
-        console.log(props.toggleLogin)
-      )}
+      ) : null}
     </div>
   )
 }
