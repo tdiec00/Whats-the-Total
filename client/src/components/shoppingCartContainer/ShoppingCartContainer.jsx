@@ -8,8 +8,7 @@ import "./shoppingCart.css"
 export default function ShoppingCartContainer() {
   const [products, setProducts] = useState([])
   const [number, setNumber] = useState([])
-  const arr = number
-  let defaultNum = 0
+
   useEffect(() => {
     const fetchProducts = async () => {
       const id = localStorage.getItem("id")
