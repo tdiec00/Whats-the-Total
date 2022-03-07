@@ -7,16 +7,12 @@ import "./shoppingCart.css"
 
 export default function ShoppingCartContainer() {
   const [products, setProducts] = useState([])
-  //testing component
-  // const [number, setNumber] = useState([])
 
   useEffect(() => {
     const fetchProducts = async () => {
       const id = localStorage.getItem("id")
       const products = await getUserProducts(id)
       setProducts(products)
-      //testingcomponent
-      // setNumber(new Array(products.length).fill(0))
     }
     fetchProducts()
   }, [])
@@ -26,32 +22,6 @@ export default function ShoppingCartContainer() {
     await deleteFromCart(id, product_id)
     window.location.reload(false)
   }
-
-  // Working on this component. Does not work yet
-
-  // const countUp = (e, index) => {
-  //   e.preventDefault()
-  //   arr[index] += 1
-  //   console.log(arr)
-  //   arr.filter((num, i) => {
-  //     if (i === index) {
-  //       defaultNum = arr[index]
-  //     }
-  //     console.log(defaultNum)
-  //   })
-  //   setNumber(arr)
-  // }
-
-  // const countDown = (e, index) => {
-  //   e.preventDefault()
-  //   if (number[index] <= 0) {
-  //     arr[index] = 0
-  //     setNumber(arr)
-  //   } else {
-  //     arr[index] -= 1
-  //     setNumber(arr)
-  //   }
-  // }
 
   return (
     <div className="shopping-cart">
@@ -77,11 +47,6 @@ export default function ShoppingCartContainer() {
                 <div className="cart-text-container-2">
                   <h4>${product.price.toFixed(2)}</h4>
                 </div>
-                {/* <div className="counter">
-                  {number && <button onClick={(e) => countDown(e, index)}>-</button>}
-                  <p>{defaultNum}</p>
-                  {number && <button onClick={(e) => countUp(e, index)}>+</button>}
-                </div> */}
                 <div className="cart-button-container">
                   <button onClick={() => handleDelete(product.id)}>Remove</button>
                 </div>

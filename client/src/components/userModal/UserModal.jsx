@@ -32,11 +32,11 @@ export default function UserModal(props) {
                 <SignUp
                   setToggleSignup={props.setToggleSignup}
                   setCurrentUser={props.setCurrentUser}
-                  handleLogin={props.handleLogin}
+                  handleSignUp={props.handleSignUp}
                   setUsername={props.setUsername}
                   setPassword={props.setPassword}
                   setEmail={props.setEmail}
-                  setIs_customer={props.setIs_Customer}
+                  setIs_Customer={props.setIs_Customer}
                   setIs_Admin={props.setIs_Admin}
                   username={props.username}
                   password={props.password}

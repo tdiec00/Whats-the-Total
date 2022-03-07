@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   # GET /users
   def index
     @users = User.all
-
     render json: @users
   end
 
@@ -25,7 +24,7 @@ class UsersController < ApplicationController
 
   def delete_product
     @user = User.find(params[:id])
-    @user = Product.find(params[:product_id])
+    @product = Product.find(params[:product_id])
     index = @product.id
     @array = @user.products.find_all{|i| i.id == index}
     @array.pop
