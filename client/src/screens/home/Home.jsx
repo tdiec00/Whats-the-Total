@@ -39,6 +39,17 @@ export default function Home(props) {
     navigate("/products")
   }
 
+  const guestSignIn = async (e) => {
+    e.preventDefault()
+    const guest = {
+      username: "guest",
+      password: "123456",
+    }
+    const resp = await loginUser(guest)
+    props.setCurrentUser(resp)
+    navigate("/products")
+  }
+
   return (
     <div className="homeButtonContainer">
       <button className="homeButton" onClick={() => setToggleSignup((prevToggle) => !prevToggle)}>
@@ -49,6 +60,9 @@ export default function Home(props) {
 
       <button className="homeButton" onClick={() => setToggleLogin((prevToggle) => !prevToggle)}>
         Login
+      </button>
+      <button className="homeButton" onClick={(e) => guestSignIn(e)}>
+        Guest Login
       </button>
 
       <UserModal
