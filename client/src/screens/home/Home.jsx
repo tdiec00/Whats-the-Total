@@ -61,6 +61,7 @@ export default function Home(props) {
       <button className="homeButton" onClick={() => setToggleLogin((prevToggle) => !prevToggle)}>
         Login
       </button>
+      <br />
       <button className="homeButton" onClick={(e) => guestSignIn(e)}>
         Guest Login
       </button>
