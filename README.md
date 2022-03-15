@@ -98,7 +98,7 @@ This is a grocery store/shopping cart app where admins are able to create and ma
 
 This snippet of code is a method designed to remove a product from the shopping cart by deleting it.
 
-def delete_product
+```def delete_product
 @user = User.find(params[:id])
 @product = Product.find(params[:product_id])
 index = @product.id
@@ -108,3 +108,4 @@ index = @product.id
 @user.products << @array
 render json: @user.products
 end
+```
