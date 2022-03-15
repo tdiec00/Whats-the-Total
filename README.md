@@ -69,30 +69,29 @@ This is a grocery store/shopping cart app where admins are able to create and ma
 
 | Task                                  | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Create Rails application              |          |     1 hrs      |               |             |
-| Rails Scaffold                        |          |     1 hrs      |               |             |
-| Backend Controllers                   |          |     3 hrs      |               |             |
-| Test backend routes                   |          |     2 hrs      |               |             |
-| deploy backend                        |          |     4 hrs      |               |             |
-| Create react app                      |          |     2 hrs      |               |             |
-| Screen and components setup for react |          |     2 hrs      |               |             |
-| API configuration setup               |          |     4 hrs      |               |             |
-| Create products for admins            |          |     3 hrs      |               |             |
-| Update products for admins            |          |     3 hrs      |               |             |
-| Create shopping cart for users        |          |     3 hrs      |               |             |
-| Add to and delete from shopping cart  |          |     4 hrs      |               |             |
-| Checkout shopping cart functionality  |          |     4 hrs      |               |             |
-| Styling screens                       |          |     6 hrs      |               |             |
-| Styling navbar and footer             |          |     4 hrs      |               |             |
-| Navbar functionality                  |          |     2 hrs      |               |             |
-| Style navbar                          |          |     4 hrs      |               |             |
-| Footer functionality                  |          |     3 hrs      |               |             |
-| Style footer                          |          |     3 hrs      |               |             |
-| Test frontend routes and calls        |          |     3 hrs      |               |             |
+| Create Rails application              |          |     1 hrs      |      1hr      |             |
+| Rails Scaffold                        |          |     1 hrs      |      3hr      |             |
+| Backend Controllers                   |          |     3 hrs      |      5hr      |             |
+| Test backend routes                   |          |     2 hrs      |     2hrs      |             |
+| deploy backend                        |          |     4 hrs      |     3hrs      |             |
+| Create react app                      |          |     2 hrs      |      1hr      |             |
+| Screen and components setup for react |          |     2 hrs      |      1hr      |             |
+| API configuration setup               |          |     4 hrs      |      3hr      |             |
+| Create products for admins            |          |     3 hrs      |    3.5hrs     |             |
+| Update products for admins            |          |     3 hrs      |     4hrs      |             |
+| Create shopping cart for users        |          |     3 hrs      |     5hrs      |             |
+| Add to and delete from shopping cart  |          |     4 hrs      |     6hrs      |             |
+| Checkout shopping cart functionality  |          |     4 hrs      |     4hrs      |             |
+| Styling screens                       |          |     6 hrs      |     10hrs     |             |
+| Styling navbar and footer             |          |     4 hrs      |     3hrs      |             |
+| Navbar functionality                  |          |     2 hrs      |    2.5hrs     |             |
+| Footer functionality                  |          |     3 hrs      |     4hrs      |             |
+| Style footer                          |          |     3 hrs      |     4hrs      |             |
+| Test frontend routes and calls        |          |     3 hrs      |     2hrs      |             |
 | Refactor code                         |          |     5 hrs      |               |             |
-| User authorization backend            |          |     4 hrs      |               |             |
-| User authorization frontend           |          |     4 hrs      |               |             |
-| Total                                 |          |     73 hrs     |               |             |
+| User authorization backend            |          |     4 hrs      |     2hrs      |             |
+| User authorization frontend           |          |     4 hrs      |     3hrs      |             |
+| Total                                 |          |     73 hrs     |     71hrs     |             |
 
 <br>
 
@@ -117,8 +116,17 @@ This is a grocery store/shopping cart app where admins are able to create and ma
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+This snippet of code is a method designed to remove a product from the shopping cart by deleting it.
+
+def delete_product
+@user = User.find(params[:id])
+@product = Product.find(params[:product_id])
+index = @product.id
+@array = @user.products.find_all{|i| i.id == index}
+@array.pop
+@user.products.delete(params[:product_id])
+@user.products << @array
+render json: @user.products
+end
 
 ## Code Issues & Resolutions
-
-> Use this section to list of all major issues encountered and their resolution.
