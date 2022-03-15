@@ -9,22 +9,13 @@ application up and running.
 
 ### App Name
 
-Things you may want to cover:
-
 Whats-the-Total
-
-- Ruby version
 
 ### Description
 
-- System dependencies
-
 This is a grocery store/shopping cart app where admins are able to create and manage grocery store products. The user/customer is able to browse and add items to their shopping cart. The admins/owners are able to checkout the user/customers.
 
-- Configuration
-
 <br>
-* Database creation
 
 ## MVP
 
