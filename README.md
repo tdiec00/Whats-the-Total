@@ -108,5 +108,3 @@ index = @product.id
 @user.products << @array
 render json: @user.products
 end
-
-## Code Issues & Resolutions
