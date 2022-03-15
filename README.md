@@ -19,19 +19,12 @@ This is a grocery store/shopping cart app where admins are able to create and ma
 
 ## MVP
 
-- Database initialization
-
-* Functional models, controllers, and routes for the rails backend
-* Functional CRUD operations for products and categories for the market
-* Reactive CSS design for mobile and destkop
-* Working design and functionality for all screens
-* Users can add and remove items from their carts
-* Pricing works for shopping cart
-
-- How to run the test suite
-
-<br>
-* Services (job queues, cache servers, search engines, etc.)
+- Functional models, controllers, and routes for the rails backend
+- Functional CRUD operations for products and categories for the market
+- Reactive CSS design for mobile and destkop
+- Working design and functionality for all screens
+- Users can add and remove items from their carts
+- Pricing works for shopping cart
 
 ### Libraries and Dependencies
 
@@ -43,10 +36,6 @@ This is a grocery store/shopping cart app where admins are able to create and ma
 | React Router  | routing library for react |
 | Ruby on Rails | backend library           |
 |   Tailwind    | Styling library           |
-
-<br>
-
-### Client (Front End)
 
 #### Wireframes
 
