@@ -1,7 +1,5 @@
 import {useState, useEffect} from "react"
-import {getUserProducts} from "../../services/users"
-import {deleteFromCart} from "../../services/users"
-import {updateShoppingCart} from "../../services/shoppincart"
+import {getUserProducts, updateCartCount, deleteFromCart} from "../../services/users"
 import ShoppingTotal from "../shoppingTotal/ShoppingTotal"
 import CheckoutButton from "../checkoutButton/CheckoutButton"
 import "./shoppingCart.css"
@@ -43,7 +41,7 @@ export default function ShoppingCartContainer() {
       number: quantity,
     }
     console.log(updatedProduct)
-    updateShoppingCart(id, product_id, updatedProduct)
+    updateCartCount(id, product_id, updatedProduct)
   }
 
   return (
