@@ -44,7 +44,8 @@ def update_count
   # @user.products.update({id: params[:product_id], number: params[:number]})
   # render json: @user.products
   @product = @user.products.find(params[:product_id])
-  render json: @product.update({number: params[:number]})
+  @product.update({number: params[:number]})
+  render json: @product
   # if @user.save
   #   render json: @user
   # else
