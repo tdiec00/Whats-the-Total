@@ -40,15 +40,16 @@ class UsersController < ApplicationController
   end
 
 def update_count
+  @user = User.find(params[:id])
   # @user.products.update({id: params[:product_id], number: params[:number]})
   # render json: @user.products
   @product = @user.products.find(params[:product_id])
   @product.number = 5
   # @product.update({number: params[:number]})
-  if @user.save
-    render json: @user.products
+  if @product.save
+    render json: @product
   else
-    render json: @user.errors, status: :unprocessable_entity
+    render json: @product.errors, status: :unprocessable_entity
   end
 
 end
