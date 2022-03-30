@@ -46,6 +46,6 @@ class ShoppingCartsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def shopping_cart_params
-      params.require(:shopping_cart).permit(:total, :product_id, :user_id)
+      params.require(:shopping_cart).permit(:total, :product_id, :user_id, :number)
     end
 end
