@@ -43,9 +43,9 @@ def update_count
   @user = User.find(params[:id])
   @product = @user.products.find(params[:product_id])
   @product.number = 5
+  @user.products.delete(params[:product_id])
+  @user.products << @product
   render json: @user
-  # @user.products.delete(params[:product_id])
-  # @user.products << @product
   # render json: @user.products
 end
 
