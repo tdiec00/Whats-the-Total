@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   delete '/users/:id/:product_id', to: 'users#delete_product'
   get '/users/:id/products', to: 'users#get_all_products'
   put '/users/:id/products', to: 'users#remove_all'
-
+  put '/users/:id/products/:product_id', to: 'users#update_count'
   resources :users 
   resources :products
  
