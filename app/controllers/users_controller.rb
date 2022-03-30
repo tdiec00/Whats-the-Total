@@ -41,9 +41,9 @@ class UsersController < ApplicationController
 
 def update_count
   @user = User.find(params[:id])
-  @product = @user.products.find(params[:product_id]).update({:number => params[:number]})
-  # @product.update({:number => params[:number]})
-  render json: @product
+  @product = @user.products.find(params[:product_id])
+  render json: @product.update({:number => params[:number]})
+  # render json: @product
 end
 
   def remove_all
