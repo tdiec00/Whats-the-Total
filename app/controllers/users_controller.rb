@@ -46,7 +46,7 @@ def update_count
   @product = @user.products.find(params[:product_id])
   @product.update({number: params[:number]})
   if @user.save
-    render json: @product
+    render json: @user
   else
     render json: @user.errors, status: :unprocessable_entity
   end
