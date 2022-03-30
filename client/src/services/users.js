@@ -52,6 +52,7 @@ export const checkoutCart = async (user_id) => {
 }
 
 export const updateCartCount = async (user_id, product_id, productCount) => {
+  console.log(productCount)
   const resp = await api.put(`/users/${user_id}/products/${product_id}`, productCount)
   return resp.data
 }

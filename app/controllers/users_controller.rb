@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show update destroy ]
-  before_action :authorize_request, except: [:create, :get_all_products, :delete_product, :remove_all]
+  before_action :authorize_request, except: [:create, :get_all_products, :delete_product, :remove_all, :update_count]
 
   # GET /users
   def index
@@ -42,6 +42,7 @@ class UsersController < ApplicationController
 def update_count
   @user = User.find(params[:id])
   @product = @user.products.find(params[:product_id])
+  p @product
   if @product.update({number: params[:number]})
     render json: @product
   else
