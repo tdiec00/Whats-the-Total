@@ -41,7 +41,7 @@ class UsersController < ApplicationController
 
 def update_count
   @user = User.find(params[:id])
-  @product = @users.products.find(params[:product_id])
+  @product = @user.products.find(params[:product_id])
   if @product.update({number: params[:number]})
     render json: @product
   else
