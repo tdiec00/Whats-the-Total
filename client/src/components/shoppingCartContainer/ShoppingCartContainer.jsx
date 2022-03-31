@@ -24,14 +24,12 @@ export default function ShoppingCartContainer() {
   const handleDecrement = (product_id) => {
     setProducts((products) => products.map((item) => (item.id === product_id ? {...item, number: item.number - 1} : item)))
     let cartData = products.filter((product) => product_id === product.id)
-    console.log(cartData.number)
     updateCarQuantity(product_id, cartData)
   }
 
   const handleIncrement = (product_id) => {
     setProducts((products) => products.map((item) => (item.id === product_id ? {...item, number: item.number + 1} : item)))
     let cartData = products.filter((product) => product_id === product.id)
-    console.log(cartData.number)
     updateCarQuantity(product_id, cartData)
   }
 
@@ -40,7 +38,6 @@ export default function ShoppingCartContainer() {
     const updatedProduct = {
       number: quantity,
     }
-    console.log(updatedProduct)
     updateCartCount(id, product_id, updatedProduct)
   }
 
@@ -68,11 +65,11 @@ export default function ShoppingCartContainer() {
                 <div className="cart-text-container-2">
                   <h4>${product.price.toFixed(2)}</h4>
                 </div>
-                <div className="increment-container">
+                {/* <div className="increment-container">
                   <button onClick={() => handleDecrement(product.id)}>-</button>
                   <div>{product.number}</div>
                   <button onClick={() => handleIncrement(product.id)}>+</button>
-                </div>
+                </div> */}
                 <div className="cart-button-container">
                   <button onClick={() => handleDelete(product.id)}>Remove</button>
                 </div>

@@ -13,8 +13,6 @@ class UsersController < ApplicationController
     render json: @user
   end
 
- 
-
   def add_product
     @user = User.find(params[:id])
     @product = Product.find(params[:product_id])
