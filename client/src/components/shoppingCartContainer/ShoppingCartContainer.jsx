@@ -1,20 +1,27 @@
 import {useState, useEffect} from "react"
-import {getUserProducts, updateCartCount, deleteFromCart} from "../../services/users"
+import {getUserProducts, deleteFromCart} from "../../services/users"
 import ShoppingTotal from "../shoppingTotal/ShoppingTotal"
 import CheckoutButton from "../checkoutButton/CheckoutButton"
 import "./shoppingCart.css"
 
 export default function ShoppingCartContainer() {
   const [products, setProducts] = useState([])
+  const [productList, setProductList] = useState([])
   const id = localStorage.getItem("id")
 
   useEffect(() => {
     const fetchProducts = async () => {
       const products = await getUserProducts(id)
+      const ids = products.map((product) => product.id)
       setProducts(products)
+      setProductList(products.filter(({id}, index) => !ids.includes(id, index + 1)))
     }
     fetchProducts()
   }, [])
+
+  const checkQuantity = (list_id, number) => {
+    return (number = products?.filter((product) => product.id === list_id).length)
+  }
 
   const handleDelete = async (product_id) => {
     await deleteFromCart(id, product_id)
@@ -22,23 +29,19 @@ export default function ShoppingCartContainer() {
   }
 
   const handleDecrement = (product_id) => {
-    setProducts((products) => products.map((item) => (item.id === product_id ? {...item, number: item.number - 1} : item)))
-    let cartData = products.filter((product) => product_id === product.id)
-    updateCarQuantity(product_id, cartData)
+    let flag = true
+    products?.map((item, index) => {
+      if (item.id === product_id && flag === true) {
+        products.splice(index, 1)
+        flag = false
+      }
+    })
+    setProducts([...products])
   }
 
   const handleIncrement = (product_id) => {
-    setProducts((products) => products.map((item) => (item.id === product_id ? {...item, number: item.number + 1} : item)))
-    let cartData = products.filter((product) => product_id === product.id)
-    updateCarQuantity(product_id, cartData)
-  }
-
-  const updateCarQuantity = (product_id, cartData) => {
-    let quantity = cartData[0].number + 1
-    const updatedProduct = {
-      number: quantity,
-    }
-    updateCartCount(id, product_id, updatedProduct)
+    let product = productList.filter((item) => item.id === product_id)
+    setProducts([...products, product[0]])
   }
 
   return (
@@ -53,29 +56,31 @@ export default function ShoppingCartContainer() {
             <h4>Price</h4>
           </div>
         </div>
-        {products.length === 0 ? (
+        {productList?.length === 0 ? (
           <h5 className="cart-title">Your shopping Cart is empty. Please continue shopping</h5>
         ) : (
-          products.map((product, index) => {
-            return (
-              <div key={index} className="cart-container">
-                <div className="cart-text-container">
-                  <h4>{product.name}</h4>
+          <div className="cart-content-container">
+            {productList?.map((list, index) => {
+              return (
+                <div key={index} className="cart-container">
+                  <div className="cart-text-container">
+                    <h4>{list.name}</h4>
+                  </div>
+                  <div className="cart-text-container-2">
+                    <h4>${list.price.toFixed(2)}</h4>
+                  </div>
+                  <div className="increment-container">
+                    <button onClick={() => handleDecrement(list.id, list.number)}>-</button>
+                    <div className="count">{checkQuantity(list.id, list.number)}</div>
+                    <button onClick={() => handleIncrement(list.id, list.number)}>+</button>
+                  </div>
+                  <div className="cart-button-container">
+                    <button onClick={() => handleDelete(list.id)}>Remove</button>
+                  </div>
                 </div>
-                <div className="cart-text-container-2">
-                  <h4>${product.price.toFixed(2)}</h4>
-                </div>
-                {/* <div className="increment-container">
-                  <button onClick={() => handleDecrement(product.id)}>-</button>
-                  <div>{product.number}</div>
-                  <button onClick={() => handleIncrement(product.id)}>+</button>
-                </div> */}
-                <div className="cart-button-container">
-                  <button onClick={() => handleDelete(product.id)}>Remove</button>
-                </div>
-              </div>
-            )
-          })
+              )
+            })}
+          </div>
         )}
       </div>
       <div className="checkout-button">
