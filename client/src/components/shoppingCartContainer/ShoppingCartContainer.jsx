@@ -2,8 +2,10 @@ import {useState, useEffect} from "react"
 import {getUserProducts, deleteFromCart} from "../../services/users"
 import ShoppingTotal from "../shoppingTotal/ShoppingTotal"
 import CheckoutButton from "../checkoutButton/CheckoutButton"
+import ProductTotal from "../productTotal/ProductTotal"
 import "./shoppingCart.css"
 
+import {AiFillCloseCircle} from "react-icons/ai"
 export default function ShoppingCartContainer() {
   const [products, setProducts] = useState([])
   const [productList, setProductList] = useState([])
@@ -55,6 +57,12 @@ export default function ShoppingCartContainer() {
           <div className="cart-headers2">
             <h4>Price</h4>
           </div>
+          <div className="cart-headers3">
+            <h4>Quantity</h4>
+          </div>
+          <div>
+            <h4>Total</h4>
+          </div>
         </div>
         {productList?.length === 0 ? (
           <h5 className="cart-title">Your shopping Cart is empty. Please continue shopping</h5>
@@ -74,8 +82,14 @@ export default function ShoppingCartContainer() {
                     <div className="count">{checkQuantity(list.id, list.number)}</div>
                     <button onClick={() => handleIncrement(list.id, list.number)}>+</button>
                   </div>
+                  <div className="cart-text-container-2">
+                    <ProductTotal products={products} price={list.price.toFixed(2)} list_id={list.id} />
+                  </div>
                   <div className="cart-button-container">
-                    <button onClick={() => handleDelete(list.id)}>Remove</button>
+                    {/* <button onClick={() => handleDelete(list.id)}>Remove</button> */}
+                    <button>
+                      <AiFillCloseCircle onClick={() => handleDelete(list.id)} />
+                    </button>
                   </div>
                 </div>
               )
