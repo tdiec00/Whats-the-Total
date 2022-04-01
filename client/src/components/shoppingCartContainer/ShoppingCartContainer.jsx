@@ -6,7 +6,8 @@ import ProductTotal from "../productTotal/ProductTotal"
 import "./shoppingCart.css"
 
 import {AiFillCloseCircle} from "react-icons/ai"
-export default function ShoppingCartContainer() {
+
+export default function ShoppingCartContainer(props) {
   const [products, setProducts] = useState([])
   const [productList, setProductList] = useState([])
   const id = localStorage.getItem("id")
@@ -39,11 +40,13 @@ export default function ShoppingCartContainer() {
       }
     })
     setProducts([...products])
+    props.setCount(products.length)
   }
 
   const handleIncrement = (product_id) => {
     let product = productList.filter((item) => item.id === product_id)
     setProducts([...products, product[0]])
+    props.setCount(products.length)
   }
 
   return (

@@ -1,9 +1,9 @@
 import ShoppingCartContainer from "../../components/shoppingCartContainer/ShoppingCartContainer"
 
-export default function Cart() {
+export default function Cart(props) {
   return (
     <div>
-      <ShoppingCartContainer />
+      <ShoppingCartContainer setCount={props.setCount} />
     </div>
   )
 }

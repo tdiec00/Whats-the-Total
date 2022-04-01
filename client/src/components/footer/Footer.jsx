@@ -45,7 +45,7 @@ export default function Footer(props) {
           <div>
             <div className="emoji-container">
               <BurgerMenu toggleClass={props.toggleClass} handleToggle={props.handleToggle} />
-              <button className="cart-emoji" onClick={handleToggle}>
+              <button className="cart-emoji" onClick={props.handleToggle}>
                 <GiHamburgerMenu />
               </button>
             </div>
@@ -67,8 +67,8 @@ export default function Footer(props) {
           </div>
           <div>
             <div className="emoji-container">
-              <BurgerMenu toggleClass={toggleClass} handleToggle={handleToggle} />
-              <button className="cart-emoji" onClick={handleToggle}>
+              <BurgerMenu toggleClass={props.toggleClass} handleToggle={props.handleToggle} />
+              <button className="cart-emoji" onClick={props.handleToggle}>
                 <GiHamburgerMenu />
               </button>
             </div>
