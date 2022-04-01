@@ -2,7 +2,6 @@ import {useState} from "react"
 import {useNavigate} from "react-router-dom"
 import {FaShoppingCart} from "react-icons/fa"
 import {GiHamburgerMenu} from "react-icons/gi"
-import NavTotal from "../navTotal/NavTotal"
 import AddProductButton from "../addProductButton/AddProductButton"
 import BurgerMenu from "../burgerMenu/BurgerMenu"
 import "./footer.css"
@@ -63,7 +62,7 @@ export default function Footer(props) {
           <div className="cart-emoji-container">
             <button className="cart-emoji" onClick={handleNavigate}>
               <FaShoppingCart />
-              <p>{props.count}</p>
+              <p className="footer-product-count">{props.count}</p>
             </button>
           </div>
           <div>

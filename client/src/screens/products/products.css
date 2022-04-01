@@ -41,3 +41,7 @@
   display: flex;
   align-items: center;
 }
+
+.products-h1-container {
+  margin-top: 50px;
+}
