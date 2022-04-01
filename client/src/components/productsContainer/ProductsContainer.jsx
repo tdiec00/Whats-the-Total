@@ -22,7 +22,7 @@ export default function ProductsContainer() {
   const handleSubmit = async (product_id) => {
     const id = localStorage.getItem("id")
     await addToCart(id, product_id)
-    alert("Product Added")
+    window.location.reload(false)
   }
 
   return (

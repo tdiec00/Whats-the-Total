@@ -19,7 +19,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000)
+    setLoading(false)
   })
 
   const [currentUser, setCurrentUser] = useState(null)

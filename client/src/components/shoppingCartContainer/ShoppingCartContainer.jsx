@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react"
-import {getUserProducts, deleteFromCart} from "../../services/users"
+import {getUserProducts, deleteFromCart, addToCart} from "../../services/users"
 import ShoppingTotal from "../shoppingTotal/ShoppingTotal"
 import CheckoutButton from "../checkoutButton/CheckoutButton"
 import ProductTotal from "../productTotal/ProductTotal"
@@ -48,6 +48,8 @@ export default function ShoppingCartContainer(props) {
     let product = productList.filter((item) => item.id === product_id)
     setProducts([...products, product[0]])
     props.setCount(products.length)
+    const id = localStorage.getItem("id")
+    addToCart(id, product_id)
   }
 
   return (
