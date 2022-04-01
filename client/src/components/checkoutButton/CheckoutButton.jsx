@@ -1,4 +1,5 @@
 import {checkoutCart} from "../../services/users"
+import {HiShoppingCart} from "react-icons/hi"
 
 export default function CheckoutButton() {
   const id = localStorage.getItem("id")
@@ -7,5 +8,5 @@ export default function CheckoutButton() {
     window.location.reload(false)
   }
 
-  return <button onClick={() => handleSubmit()}>Check Out</button>
+  return <button onClick={() => handleSubmit()}>Check Out{<HiShoppingCart />}</button>
 }

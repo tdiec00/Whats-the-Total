@@ -8,13 +8,9 @@ import "./footer.css"
 
 export default function Footer(props) {
   //eslint-disable-next-line
-  const [toggle, setToggle] = useState(false)
+
   const navigate = useNavigate()
   const path = window.location.pathname
-
-  const handleToggle = () => {
-    setToggle((prevToggle) => !prevToggle)
-  }
 
   const loginNav = () => {
     if (path === "/") {
@@ -24,7 +20,6 @@ export default function Footer(props) {
     }
   }
 
-  const toggleClass = toggle ? "ease-in" : "ease-out"
   const handleNavigate = () => {
     navigate("/shopping-cart")
   }
@@ -43,12 +38,14 @@ export default function Footer(props) {
           <div className="cart-emoji-container">
             <button className="cart-emoji" onClick={handleNavigate}>
               <FaShoppingCart />
+              <p className="footer-product-count">{props.count}</p>
+              {/* <NavTotal /> */}
             </button>
           </div>
           <div>
             <div className="emoji-container">
-              <BurgerMenu toggleClass={toggleClass} handleToggle={handleToggle} />
-              <button className="cart-emoji" onClick={handleToggle}>
+              <BurgerMenu toggleClass={props.toggleClass} handleToggle={props.handleToggle} />
+              <button className="cart-emoji" onClick={props.handleToggle}>
                 <GiHamburgerMenu />
               </button>
             </div>
@@ -65,12 +62,13 @@ export default function Footer(props) {
           <div className="cart-emoji-container">
             <button className="cart-emoji" onClick={handleNavigate}>
               <FaShoppingCart />
+              <p className="footer-product-count">{props.count}</p>
             </button>
           </div>
           <div>
             <div className="emoji-container">
-              <BurgerMenu toggleClass={toggleClass} handleToggle={handleToggle} />
-              <button className="cart-emoji" onClick={handleToggle}>
+              <BurgerMenu toggleClass={props.toggleClass} handleToggle={props.handleToggle} />
+              <button className="cart-emoji" onClick={props.handleToggle}>
                 <GiHamburgerMenu />
               </button>
             </div>

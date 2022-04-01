@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/users/:id/products', to: 'users#get_all_products'
   put '/users/:id/products', to: 'users#remove_all'
   put '/users/:id/products/:product_id', to: 'users#update_count'
+  delete '/users/:id/:product_id/1', to: 'users#decrement_product'
+
   resources :users 
   resources :products
  
