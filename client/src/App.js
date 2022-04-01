@@ -57,7 +57,7 @@ function App() {
   return (
     <>
       {loading === false ? (
-        <div className="main-body" onClick={() => (toggle == true ? setToggle(false) : null)}>
+        <div className="main-body" onClick={() => (toggle === true ? setToggle(false) : null)}>
           <Navbar logOut={logOut} currentUser={currentUser} />
           <div className="page-container">
             <Routes>

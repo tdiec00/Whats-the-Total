@@ -20,7 +20,7 @@ export default function ShoppingCartContainer(props) {
       setProductList(products.filter(({id}, index) => !ids.includes(id, index + 1)))
     }
     fetchProducts()
-  }, [])
+  }, [id])
 
   const checkQuantity = (list_id, number) => {
     return (number = products?.filter((product) => product.id === list_id).length)
@@ -36,7 +36,7 @@ export default function ShoppingCartContainer(props) {
     products?.map((item, index) => {
       if (item.id === product_id && flag === true) {
         products.splice(index, 1)
-        flag = false
+        return (flag = false)
       }
     })
     setProducts([...products])
