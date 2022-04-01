@@ -36,8 +36,9 @@ export default function ShoppingCartContainer(props) {
     products?.map((item, index) => {
       if (item.id === product_id && flag === true) {
         products.splice(index, 1)
-        return (flag = false)
+        flag = false
       }
+      return flag
     })
     setProducts([...products])
     props.setCount(products.length)
