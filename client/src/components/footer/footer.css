@@ -22,7 +22,11 @@
   align-items: center;
 }
 
-.cart-emoji p {
+/* .cart-emoji p {
+
+} */
+
+.footer-product-count {
   position: absolute;
   margin-top: 0;
   margin-left: 20px;

@@ -2,13 +2,14 @@ import {useState} from "react"
 import {useNavigate} from "react-router-dom"
 import {FaShoppingCart} from "react-icons/fa"
 import {GiHamburgerMenu} from "react-icons/gi"
+import NavTotal from "../navTotal/NavTotal"
 import AddProductButton from "../addProductButton/AddProductButton"
 import BurgerMenu from "../burgerMenu/BurgerMenu"
 import "./footer.css"
 
 export default function Footer(props) {
   //eslint-disable-next-line
-  const [toggle, setToggle] = useState(false)
+
   const navigate = useNavigate()
   const path = window.location.pathname
 
@@ -20,7 +21,6 @@ export default function Footer(props) {
     }
   }
 
-  const toggleClass = toggle ? "ease-in" : "ease-out"
   const handleNavigate = () => {
     navigate("/shopping-cart")
   }
@@ -39,7 +39,8 @@ export default function Footer(props) {
           <div className="cart-emoji-container">
             <button className="cart-emoji" onClick={handleNavigate}>
               <FaShoppingCart />
-              <p>{props.count}</p>
+              <p className="footer-product-count">{props.count}</p>
+              {/* <NavTotal /> */}
             </button>
           </div>
           <div>
