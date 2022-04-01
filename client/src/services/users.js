@@ -46,6 +46,11 @@ export const deleteFromCart = async (user_id, product_id) => {
   return resp.data
 }
 
+export const decrementCount = async (user_id, product_id) => {
+  const resp = await api.delete(`/users/${user_id}/${product_id}/1`)
+  return resp.data
+}
+
 export const checkoutCart = async (user_id) => {
   const resp = await api.put(`/users/${user_id}/products`)
   return resp.data
