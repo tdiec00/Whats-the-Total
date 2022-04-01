@@ -12,10 +12,6 @@ export default function Footer(props) {
   const navigate = useNavigate()
   const path = window.location.pathname
 
-  const handleToggle = () => {
-    setToggle((prevToggle) => !prevToggle)
-  }
-
   const loginNav = () => {
     if (path === "/") {
       alert("Please Click the Login button in the middle.")
@@ -43,11 +39,12 @@ export default function Footer(props) {
           <div className="cart-emoji-container">
             <button className="cart-emoji" onClick={handleNavigate}>
               <FaShoppingCart />
+              <p>{props.count}</p>
             </button>
           </div>
           <div>
             <div className="emoji-container">
-              <BurgerMenu toggleClass={toggleClass} handleToggle={handleToggle} />
+              <BurgerMenu toggleClass={props.toggleClass} handleToggle={props.handleToggle} />
               <button className="cart-emoji" onClick={handleToggle}>
                 <GiHamburgerMenu />
               </button>
@@ -65,6 +62,7 @@ export default function Footer(props) {
           <div className="cart-emoji-container">
             <button className="cart-emoji" onClick={handleNavigate}>
               <FaShoppingCart />
+              <p>{props.count}</p>
             </button>
           </div>
           <div>
