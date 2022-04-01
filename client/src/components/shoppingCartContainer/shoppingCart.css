@@ -1,6 +1,6 @@
 .cart-container {
   display: grid;
-  grid-template-columns: 200px 100px 150px 200px;
+  grid-template-columns: 200px 75px 200px 100px 50px;
   box-shadow: 0 5px 5px -5px rgba(115, 115, 115, 0.75);
   height: 75px;
 }
@@ -35,7 +35,7 @@
 
 .headers-container {
   display: grid;
-  grid-template-columns: 200px 100px 150px 200px;
+  grid-template-columns: 200px 75px 200px 100px 50px;
   box-shadow: 0 5px 5px -5px rgba(115, 115, 115, 0.75);
   text-align: left;
 }
@@ -56,6 +56,9 @@
 
 .cart-headers2 h4 {
   margin-bottom: 8px;
+}
+.cart-headers3 {
+  text-align: center;
 }
 
 .cart-button-container {
@@ -86,20 +89,19 @@
 }
 
 .cart-button-container button {
-  border: 1px solid #e85b3b;
   background-color: transparent;
-  margin-right: 20px;
-  border-radius: 20px;
-  padding: 5px 2px 5px 2px;
-  font-weight: bold;
-  font-size: 12px;
-  width: 75px;
   display: flex;
   justify-content: center;
+  border: none;
 }
 
-.cart-button-container button:hover {
-  background: linear-gradient(45deg, #e85b3b, rgb(232, 33, 86, 0.7));
+.cart-button-container svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.cart-button-container svg:hover {
+  fill: red;
 }
 
 .total-container {
@@ -113,28 +115,38 @@
 }
 
 .checkout-button {
-  display: flex;
-  width: 500px;
+  display: grid;
+  grid-template-columns: 500px 200px;
   justify-content: flex-end;
   margin-top: 15px;
 }
 
 .checkout-button button {
-  border: 1px solid #e85b3b;
+  grid-column: 2;
+  border: 2px solid black;
+  /* border: 1px solid #e85b3b; */
   background-color: transparent;
   margin-right: 20px;
   border-radius: 20px;
   padding: 5px 2px 5px 2px;
   font-weight: bold;
-  font-size: 12px;
-  width: 75px;
+  font-size: 18px;
+  width: 150px;
   display: flex;
+  align-items: center;
   justify-content: center;
   z-index: 3;
 }
 
+.checkout-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 5px;
+}
+
 .checkout-button button:hover {
-  background: linear-gradient(45deg, #e85b3b, rgb(232, 33, 86, 0.7));
+  /* background: linear-gradient(45deg, #e85b3b, rgb(232, 33, 86, 0.7)); */
+  background-color: red;
 }
 
 .counter {
