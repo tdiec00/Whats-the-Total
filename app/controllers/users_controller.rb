@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   def delete_product
     @user = User.find(params[:id])
     @product = Product.find(params[:product_id])
-    # @user.products.delete(params[:product_id])
+    @user.products.delete(params[:product_id])
     render json: @user.products
   end
 
