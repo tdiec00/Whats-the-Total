@@ -45,7 +45,11 @@ export default function ShoppingCartContainer(props) {
     const id = localStorage.getItem("id")
     decrementCount(id, product_id)
   }
-  console.log(states)
+
+  let rate = Object.entries(states.states).filter((state) => {
+    return state[0] === "MA"
+  })
+  let tax = rate[0][1]?.rate
 
   const handleIncrement = (product_id) => {
     let product = productList.filter((item) => item.id === product_id)
