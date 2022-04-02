@@ -5,7 +5,6 @@ import CheckoutButton from "../checkoutButton/CheckoutButton"
 import ProductTotal from "../productTotal/ProductTotal"
 import "./shoppingCart.css"
 import {AiFillCloseCircle} from "react-icons/ai"
-import states from "../../utilities/saleTax.json"
 
 export default function ShoppingCartContainer(props) {
   const [products, setProducts] = useState([])
@@ -45,11 +44,6 @@ export default function ShoppingCartContainer(props) {
     const id = localStorage.getItem("id")
     decrementCount(id, product_id)
   }
-
-  let rate = Object.entries(states.states).filter((state) => {
-    return state[0] === "MA"
-  })
-  let tax = rate[0][1]?.rate
 
   const handleIncrement = (product_id) => {
     let product = productList.filter((item) => item.id === product_id)
