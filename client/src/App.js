@@ -32,6 +32,7 @@ function App() {
     }
     getUser()
   }, [])
+  console.log(currentUser)
 
   const logOut = () => {
     localStorage.removeItem("authToken")

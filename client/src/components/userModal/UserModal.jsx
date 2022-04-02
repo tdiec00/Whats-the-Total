@@ -41,6 +41,7 @@ export default function UserModal(props) {
                   username={props.username}
                   password={props.password}
                   email={props.email}
+                  setState={props.setState}
                   is_customer={props.is_customer}
                   is_admin={props.is_admin}
                 />
