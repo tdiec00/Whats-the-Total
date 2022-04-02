@@ -23,6 +23,7 @@ export default function Home(props) {
       password,
       is_admin,
       is_customer,
+      state,
     }
     console.log(newUser)
     const resp = await registerUser(newUser)
