@@ -89,6 +89,10 @@
   justify-content: center;
 }
 
+.subtotal-container {
+  margin-bottom: -5px;
+}
+
 .cart-button-container button {
   background-color: transparent;
   display: flex;

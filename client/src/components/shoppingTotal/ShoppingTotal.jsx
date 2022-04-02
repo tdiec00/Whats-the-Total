@@ -13,11 +13,11 @@ export default function ShoppingTotal(props) {
   let taxRate = rate[0][1]?.rate
   let tax = Number((total.toFixed(2) * taxRate).toFixed(2))
   let finalTotal = total + tax
-  console.log(rate)
 
   return (
     <div className="total-container">
-      <p className="total-text-container">Tax: ${tax}</p>
+      <p className="subtotal-container">Subtotal: ${total.toFixed(2)}</p>
+      <p className="total-text-container">Tax: ${tax.toFixed(2)}</p>
       <p>Your Total: ${finalTotal.toFixed(2)}</p>
     </div>
   )
