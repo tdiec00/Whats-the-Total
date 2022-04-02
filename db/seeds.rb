@@ -57,3 +57,4 @@
 # @chobani = Product.find(35)
 # @trung.products << [@orange, @tater, @brocolli, @chobani]
 # @immanuel.products << [@orange, @tater, @brocolli, @chobani]
+
