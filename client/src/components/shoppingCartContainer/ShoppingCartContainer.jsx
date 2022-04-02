@@ -93,7 +93,6 @@ export default function ShoppingCartContainer(props) {
                     <ProductTotal products={products} price={list.price.toFixed(2)} list_id={list.id} />
                   </div>
                   <div className="cart-button-container">
-                    {/* <button onClick={() => handleDelete(list.id)}>Remove</button> */}
                     <button>
                       <AiFillCloseCircle onClick={() => handleDelete(list.id)} />
                     </button>
