@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show update destroy update_count]
-  before_action :authorize_request, except: [:get_all_products, :delete_product, :remove_all, :update_count]
+  before_action :authorize_request, except: [:create, :get_all_products, :delete_product, :remove_all, :update_count]
 
   # GET /users
   def index
@@ -54,16 +54,16 @@ class UsersController < ApplicationController
   # POST /users
   def create
     @user = User.new(user_params)
-    
-    if @user.save
-      @token = encode({id: @user.id})
-      render json: {
-        user: @user.attributes.except("password_digest"),
-        token: @token
-        }, status: :created
-    else
-      render json: @user.errors, status: :unprocessable_entity
-    end
+    render json: @user
+    # if @user.save
+    #   @token = encode({id: @user.id})
+    #   render json: {
+    #     user: @user.attributes.except("password_digest"),
+    #     token: @token
+    #     }, status: :created
+    # else
+    #   render json: @user.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /users/1
