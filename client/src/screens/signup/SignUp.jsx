@@ -1,3 +1,4 @@
+import StateDropdown from "../../components/stateDropdown/StateDropdown"
 import "./signUp.css"
 
 export default function SignUp(props) {
@@ -34,6 +35,8 @@ export default function SignUp(props) {
           }}
           placeholder="password must be 6 digits long"
         />
+        <br />
+        <StateDropdown setState={props.setState} />
         <br />
         <input className="input-boolean-container" type="checkbox" value={props.is_admin} onChange={() => props.setIs_Admin((is_admin) => !is_admin)} />
         <label>Will you be an employee?</label>
