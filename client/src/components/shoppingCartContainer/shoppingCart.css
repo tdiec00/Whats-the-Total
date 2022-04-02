@@ -107,13 +107,18 @@
 
 .total-container {
   display: grid;
-  grid-template-columns: 450px 200px;
+  grid-template-columns: 450px 150px;
   bottom: 0;
   font-weight: bold;
+  text-align: right;
 }
 
 .total-container p {
   grid-column: 2;
+}
+
+.total-text-container {
+  margin-bottom: -5px;
 }
 
 .checkout-button {
