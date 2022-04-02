@@ -45,7 +45,7 @@ export default function Home(props) {
   const guestSignIn = async (e) => {
     e.preventDefault()
     const guest = {
-      username: "guest",
+      username: "guest1",
       password: "123456",
     }
     const resp = await loginUser(guest)
