@@ -2,7 +2,7 @@ import states from "../../utilities/saleTax.json"
 
 export default function StateDropdown(props) {
   return (
-    <select onChange={(event) => props.handleChange(event.target.value)}>
+    <select onChange={(event) => props.setState(event.target.value)}>
       <option>Select a State</option>
       {Object.keys(states.states).map((state, value) => {
         return (
