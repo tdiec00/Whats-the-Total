@@ -37,7 +37,9 @@ export default function Footer(props) {
           <div className="cart-emoji-container">
             <button className="cart-emoji" onClick={handleNavigate}>
               <FaShoppingCart />
-              <p className="footer-product-count">{props.count}</p>
+              <div className="footer-count-container">
+                <p>{props.count}</p>
+              </div>
               {/* <NavTotal /> */}
             </button>
           </div>
@@ -61,7 +63,9 @@ export default function Footer(props) {
           <div className="cart-emoji-container">
             <button className="cart-emoji" onClick={handleNavigate}>
               <FaShoppingCart />
-              <p className="footer-product-count">{props.count}</p>
+              <div className="footer-count-container">
+                <p>{props.count}</p>
+              </div>
             </button>
           </div>
           <div>
