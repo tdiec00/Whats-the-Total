@@ -10,6 +10,7 @@ export default function Home(props) {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [email, setEmail] = useState("")
+  const [state, setState] = useState("")
   const [is_admin, setIs_Admin] = useState(false)
   const [is_customer, setIs_Customer] = useState(false)
   const navigate = useNavigate()
@@ -22,6 +23,7 @@ export default function Home(props) {
       password,
       is_admin,
       is_customer,
+      state,
     }
     const resp = await registerUser(newUser)
     props.setCurrentUser(resp)
@@ -79,6 +81,7 @@ export default function Home(props) {
         handleLogin={handleLogin}
         setUsername={setUsername}
         setPassword={setPassword}
+        setState={setState}
         username={username}
         password={password}
       />
