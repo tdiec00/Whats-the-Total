@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react"
-import {useParams} from "react-router-dom"
+import {useParams, useNavigate} from "react-router-dom"
 import {getAllProducts} from "../../services/products"
 import {addToCart} from "../../services/users"
 import EditButton from "../editButton/EditButton"
@@ -10,6 +10,7 @@ import "./productsContainer.css"
 export default function ProductsContainer() {
   const [products, setProducts] = useState([])
   const {category} = useParams()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -21,8 +22,12 @@ export default function ProductsContainer() {
 
   const handleSubmit = async (product_id) => {
     const id = localStorage.getItem("id")
-    await addToCart(id, product_id)
-    window.location.reload(false)
+    if (id === null) {
+      navigate("/")
+    } else {
+      await addToCart(id, product_id)
+      window.location.reload(false)
+    }
   }
 
   return (
