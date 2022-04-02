@@ -20,7 +20,7 @@ function App() {
 
   useEffect(() => {
     setLoading(false)
-  })
+  }, [])
 
   const [currentUser, setCurrentUser] = useState(null)
   const navigate = useNavigate()
