@@ -186,34 +186,4 @@
 }
 
 @media (max-width: 700px) {
-  .cart-container {
-    width: 350px;
-  }
-  .headers-container {
-    width: 350px;
-  }
-  .shopping-cart {
-    width: 350px;
-    border: none;
-  }
-  .checkout-button {
-    width: 350px;
-  }
-  .total-container {
-    width: 350px;
-  }
-  .cart-headers1 h4 {
-    margin-left: 8px;
-    margin-bottom: 8px;
-  }
-
-  .cart-headers2 h4 {
-    margin-left: 82px;
-    margin-bottom: 8px;
-  }
-  .cart-text-container-2 {
-    margin-top: 12px;
-    position: absolute;
-    margin-left: 150px;
-  }
 }
