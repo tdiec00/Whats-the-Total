@@ -20,7 +20,11 @@ export default function Footer(props) {
   }
 
   const handleNavigate = () => {
-    navigate("/shopping-cart")
+    if (props.currentUser) {
+      navigate("/shopping-cart")
+    } else {
+      navigate("/")
+    }
   }
 
   return (
