@@ -12,7 +12,7 @@ export default function Products() {
   return (
     <div className="catergories-page-container">
       <div className="products-h1-container">
-        <h1>Explore our various category of products</h1>
+        <h1>Explore our various categories of products</h1>
       </div>
       <div className="categories-container">
         <div className="category-container">
