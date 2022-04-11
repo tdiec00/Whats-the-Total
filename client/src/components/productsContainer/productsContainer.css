@@ -69,11 +69,17 @@
 }
 
 .button-container {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 350px;
+  width: 350px; */
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  margin-right: 10px;
+}
+.button-container button {
+  width: 90px;
 }
 
 @media (max-width: 700px) {
@@ -85,15 +91,19 @@
     width: 250px;
   }
   .product-card button {
-    font-size: 11px;
+    font-size: 10px;
   }
   .product-text-container p {
     font-size: 12px;
   }
   .button-container {
-    width: 300px;
+    grid-template-columns: 85px 85px 85px;
+    margin-right: 7px;
   }
   .product-text-container {
     grid-template-columns: 190px 60px;
+  }
+  .button-container button {
+    width: 75px;
   }
 }
