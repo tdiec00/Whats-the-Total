@@ -1,21 +1,24 @@
 .categories-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  margin-bottom: 100px;
   align-items: center;
+  justify-content: center;
 }
 
 .category-container {
   width: 300px;
   height: 200px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-  margin: 20px;
+  margin: 40px;
   border-radius: 20px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  margin: auto;
+  margin-top: 50px;
 }
 
 .categories-container a {
@@ -36,12 +39,19 @@
   cursor: pointer;
 }
 
-.page-container {
-  text-align: center;
-  display: flex;
-  align-items: center;
-}
-
 .products-h1-container {
   margin-top: 50px;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .categories-container {
+    grid-template-columns: 400px 400px;
+  }
+}
+
+@media (max-width: 700px) {
+  .categories-container {
+    grid-template-columns: 400px;
+  }
 }

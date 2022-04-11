@@ -10,7 +10,7 @@ import dairy from "../../images/dairy.jpeg"
 export default function Products() {
   const navigate = useNavigate()
   return (
-    <div>
+    <div className="catergories-page-container">
       <div className="products-h1-container">
         <h1>Explore our various category of products</h1>
       </div>

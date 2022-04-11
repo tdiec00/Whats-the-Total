@@ -1,7 +1,9 @@
 .page-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow-y: scroll;
+  margin-top: 50px;
 }
 
 .products-content-container {
