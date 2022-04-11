@@ -145,7 +145,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3;
 }
 
 .checkout-button svg {
@@ -155,7 +154,6 @@
 }
 
 .checkout-button button:hover {
-  /* background: linear-gradient(45deg, #e85b3b, rgb(232, 33, 86, 0.7)); */
   background-color: red;
 }
 
@@ -245,5 +243,9 @@
     align-items: center;
     justify-content: center;
     margin-left: 50px;
+  }
+  .shopping-cart {
+    margin-top: 60px;
+    margin-bottom: 65px;
   }
 }
