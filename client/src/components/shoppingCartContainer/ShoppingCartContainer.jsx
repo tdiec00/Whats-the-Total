@@ -91,7 +91,7 @@ export default function ShoppingCartContainer(props) {
                     <h4>${list.price.toFixed(2)}</h4>
                   </div>
                   <div className="increment-container">
-                    <button onClick={() => handleDecrement(list.id, list.number)}>{checkQuantity(list.id, list.number) === 1 ? <VscTrash /> : "-"}</button>
+                    <button onClick={() => handleDecrement(list.id, list.number)}>{checkQuantity(list.id, list.number) <= 1 ? <VscTrash /> : "-"}</button>
                     <div className="count">{checkQuantity(list.id, list.number)}</div>
                     <button onClick={() => handleIncrement(list.id, list.number)}>+</button>
                   </div>
