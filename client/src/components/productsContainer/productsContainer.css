@@ -1,6 +1,7 @@
 .page-container {
   display: flex;
   justify-content: center;
+  overflow-y: scroll;
 }
 
 .products-content-container {
