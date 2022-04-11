@@ -5,6 +5,7 @@ import CheckoutButton from "../checkoutButton/CheckoutButton"
 import ProductTotal from "../productTotal/ProductTotal"
 import "./shoppingCart.css"
 import {AiFillCloseCircle} from "react-icons/ai"
+import {VscTrash} from "react-icons/vsc"
 
 export default function ShoppingCartContainer(props) {
   const [products, setProducts] = useState([])
@@ -22,7 +23,12 @@ export default function ShoppingCartContainer(props) {
   }, [id])
 
   const checkQuantity = (list_id, number) => {
-    return (number = products?.filter((product) => product.id === list_id).length)
+    number = products?.filter((product) => product.id === list_id).length
+    if (number === 0) {
+      window.location.reload(false)
+    } else {
+      return number
+    }
   }
 
   const handleDelete = async (product_id) => {
@@ -85,7 +91,7 @@ export default function ShoppingCartContainer(props) {
                     <h4>${list.price.toFixed(2)}</h4>
                   </div>
                   <div className="increment-container">
-                    <button onClick={() => handleDecrement(list.id, list.number)}>-</button>
+                    <button onClick={() => handleDecrement(list.id, list.number)}>{checkQuantity(list.id, list.number) === 1 ? <VscTrash /> : "-"}</button>
                     <div className="count">{checkQuantity(list.id, list.number)}</div>
                     <button onClick={() => handleIncrement(list.id, list.number)}>+</button>
                   </div>

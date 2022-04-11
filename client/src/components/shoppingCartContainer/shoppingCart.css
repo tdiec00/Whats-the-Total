@@ -30,7 +30,15 @@
   border: 1px solid rgb(182, 182, 182);
   background-color: rgb(224, 224, 224);
   height: 30px;
-  width: 30px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.increment-container svg {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .headers-container {
