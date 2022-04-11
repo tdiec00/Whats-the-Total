@@ -4,6 +4,7 @@
   align-items: center;
   overflow-y: scroll;
   margin-top: 50px;
+  width: 100vw;
 }
 
 .products-content-container {
