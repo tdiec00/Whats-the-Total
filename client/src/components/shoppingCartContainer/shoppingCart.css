@@ -194,13 +194,13 @@
 @media (max-width: 700px) {
   .headers-container {
     display: grid;
-    grid-template-columns: 100px 42px 100px 50px 40px;
+    grid-template-columns: 100px 42px 110px 50px 40px;
     box-shadow: 0 5px 5px -5px rgba(115, 115, 115, 0.75);
     text-align: left;
   }
   .cart-container {
     display: grid;
-    grid-template-columns: 100px 42px 100px 50px 40px;
+    grid-template-columns: 100px 42px 110px 50px 40px;
     box-shadow: 0 5px 5px -5px rgba(115, 115, 115, 0.75);
     height: 75px;
   }
