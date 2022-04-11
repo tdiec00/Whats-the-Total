@@ -67,7 +67,8 @@
 
 .shopping-cart {
   width: 700px;
-  margin-top: 30px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,7 +112,7 @@
 
 .total-container {
   display: grid;
-  grid-template-columns: 450px 150px;
+  grid-template-columns: 425px 175px;
   bottom: 0;
   font-weight: bold;
   text-align: right;
