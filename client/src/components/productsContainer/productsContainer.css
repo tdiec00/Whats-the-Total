@@ -7,6 +7,18 @@
   width: 100vw;
 }
 
+.search-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.search-input input {
+  height: 30px;
+  width: 200px;
+  text-align: center;
+}
+
 .products-content-container {
   display: flex;
   max-width: 1400px;
@@ -16,7 +28,7 @@
   align-items: center;
   margin-top: 2vh;
   padding-bottom: 2vh;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
 }
 
