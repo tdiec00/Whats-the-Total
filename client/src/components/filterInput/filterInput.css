@@ -5,10 +5,11 @@
 
 .filter-input input {
   width: 90%;
-  height: 40px;
+  height: 35px;
   border-radius: 10px;
   border: none;
-  margin-top: 10px;
+  margin-top: 12px;
+  padding-left: 10px;
 }
 
 .filter-input input:focus {
@@ -16,12 +17,12 @@
 }
 
 .filter-input button {
-  height: 42px;
+  height: 37px;
   border-radius: 0 10px 10px 0;
   position: absolute;
   margin-left: -20px;
   background-color: white;
   border: none;
-  margin-top: 10px;
+  margin-top: 12px;
   background-color: rgb(248, 248, 98);
 }

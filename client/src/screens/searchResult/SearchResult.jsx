@@ -7,7 +7,7 @@ export default function SearchResult(props) {
       {!props.searchResults || props.searchResults.length < 1 ? (
         <div>
           <h1>No products found. Please search again.</h1>
-          <Link to="/products">Return to product categories</Link>
+          <Link to="/products">Return to categories</Link>
         </div>
       ) : (
         props.searchResults.map((product, index) => {
