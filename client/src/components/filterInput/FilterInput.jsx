@@ -1,6 +1,7 @@
 import {useState} from "react"
 import {useNavigate} from "react-router-dom"
 import {getAllProducts} from "../../services/products"
+import "./filterInput.css"
 
 export default function FilterInput(props) {
   const [searchValue, setSearchValue] = useState("")
@@ -37,9 +38,11 @@ export default function FilterInput(props) {
   }
 
   return (
-    <form onSubmit={(e) => search(e)}>
-      <input placeholder="Search for Products" onChange={(e) => setSearchValue(e.target.value)} value={searchValue} />
-      <button>Submit</button>
-    </form>
+    <div className="input-container">
+      <form className="filter-input" onSubmit={(e) => search(e)}>
+        <input placeholder="Search for Products" onChange={(e) => setSearchValue(e.target.value)} value={searchValue} />
+        <button>Search</button>
+      </form>
+    </div>
   )
 }

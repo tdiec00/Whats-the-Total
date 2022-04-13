@@ -5,12 +5,12 @@ export default function Navbar(props) {
     <div className="nav">
       {props.currentUser ? (
         <>
-          <h4>Welcome, {props.currentUser.username}. Happy shopping!!</h4>
+          <h4>Welcome, {props.currentUser.username}.</h4>
           <FilterInput setSearchResults={props.setSearchResults} />
         </>
       ) : (
         <>
-          <h4>Login to Shop with us</h4>
+          <h4>Please Login to shop</h4>
           <FilterInput setSearchResults={props.setSearchResults} />
         </>
       )}

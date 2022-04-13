@@ -5,10 +5,9 @@
   width: 100vw;
   position: fixed;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 5;
+  display: grid;
+  grid-template-columns: 100px auto 100px;
 }
 
 .nav a {
