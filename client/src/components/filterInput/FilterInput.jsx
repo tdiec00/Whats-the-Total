@@ -1,6 +1,7 @@
 import {useState} from "react"
 import {useNavigate} from "react-router-dom"
 import {getAllProducts} from "../../services/products"
+import {HiOutlineSearch} from "react-icons/hi"
 import "./filterInput.css"
 
 export default function FilterInput(props) {
@@ -41,7 +42,9 @@ export default function FilterInput(props) {
     <div className="input-container">
       <form className="filter-input" onSubmit={(e) => search(e)}>
         <input placeholder="Search for Products" onChange={(e) => setSearchValue(e.target.value)} value={searchValue} />
-        <button>Search</button>
+        <button>
+          <HiOutlineSearch />
+        </button>
       </form>
     </div>
   )
