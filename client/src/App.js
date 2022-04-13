@@ -4,9 +4,10 @@ import Navbar from "./components/navbar/Navbar"
 import Footer from "./components/footer/Footer"
 import Home from "./screens/home/Home"
 import Products from "./screens/products/Products"
+import SearchResult from "./screens/searchResult/SearchResult"
 import {verifyUser} from "./services/users"
 import {getUserProducts} from "./services/users"
-import ProductsContainer from "./components/productsContainer/ProductsContainer"
+import ProductsList from "./components/productsList/ProductsList"
 import Cart from "./screens/cart/Cart"
 import EditProductModal from "./components/editProductModal/EditProductModal"
 import ProductModal from "./components/productModal/ProductModal"
@@ -17,7 +18,8 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [toggle, setToggle] = useState(false)
   const [count, setCount] = useState(0)
-
+  const [searchResults, setSearchResults] = useState()
+  console.log(searchResults)
   useEffect(() => {
     setLoading(false)
   }, [])
@@ -32,7 +34,6 @@ function App() {
     }
     getUser()
   }, [])
-  console.log(currentUser)
 
   const logOut = () => {
     localStorage.removeItem("authToken")
@@ -59,15 +60,16 @@ function App() {
     <>
       {loading === false ? (
         <div className="main-body" onClick={() => (toggle === true ? setToggle(false) : null)}>
-          <Navbar logOut={logOut} currentUser={currentUser} />
+          <Navbar logOut={logOut} currentUser={currentUser} setSearchResults={setSearchResults} />
           <div className="page-container">
             <Routes>
               <Route path="/" element={<Home setCurrentUser={setCurrentUser} />} />
               <Route path="/products" element={<Products />} />
               <Route path="/shopping-cart" element={<Cart setCount={setCount} />} />
-              <Route path="/products/:category" element={<ProductsContainer />} />
+              <Route path="/products/:category" element={<ProductsList />} />
               <Route path="/products/edit/:id" element={<EditProductModal />} />
               <Route path="/products/add" element={<ProductModal />} />
+              <Route path="/products/search" element={<SearchResult searchResults={searchResults} />} />
             </Routes>
           </div>
           <Footer logOut={logOut} currentUser={currentUser} count={count} toggleClass={toggleClass} handleToggle={handleToggle} />
