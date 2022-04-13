@@ -19,7 +19,7 @@ function App() {
   const [toggle, setToggle] = useState(false)
   const [count, setCount] = useState(0)
   const [searchResults, setSearchResults] = useState()
-  console.log(searchResults)
+
   useEffect(() => {
     setLoading(false)
   }, [])
