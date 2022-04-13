@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
   has_and_belongs_to_many :products, dependent: :destroy
+  has_many :reviews, dependent: :destroy
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }

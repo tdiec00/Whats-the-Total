@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :reviews
   post '/auth/login', to: 'authentications#login'
   get '/auth/verify', to: 'authentications#verify'
   post '/users/:id/:product_id', to: 'users#add_product'
