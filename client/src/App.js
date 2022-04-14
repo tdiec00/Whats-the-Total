@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer"
 import Home from "./screens/home/Home"
 import Products from "./screens/products/Products"
 import SearchResult from "./screens/searchResult/SearchResult"
+import Reviews from "./screens/reviews/Reviews"
 import {verifyUser} from "./services/users"
 import {getUserProducts} from "./services/users"
 import ProductsList from "./components/productsList/ProductsList"
@@ -70,6 +71,7 @@ function App() {
               <Route path="/products/edit/:id" element={<EditProductModal />} />
               <Route path="/products/add" element={<ProductModal />} />
               <Route path="/products/search" element={<SearchResult searchResults={searchResults} />} />
+              <Route path="/products/:id/reviews" element={<Reviews />} />
             </Routes>
           </div>
           <Footer logOut={logOut} currentUser={currentUser} count={count} toggleClass={toggleClass} handleToggle={handleToggle} />
