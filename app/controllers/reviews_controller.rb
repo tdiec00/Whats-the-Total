@@ -13,8 +13,12 @@ class ReviewsController < ApplicationController
     render json: @review
   end
 
-  # POST /reviews
-  def create
+  def get_product_reviews
+    @product = Product.find(params[:product_id])
+    render json: @product.reviews
+  end
+
+  def create_review
     @review = Review.new(review_params)
 
     if @review.save
@@ -46,6 +50,6 @@ class ReviewsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def review_params
-      params.require(:review).permit(:content, :user_id, :product_id)
+      params.require(:review).permit(:content, :user_id, :product_id, :rating)
     end
 end

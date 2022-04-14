@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :reviews
   post '/auth/login', to: 'authentications#login'
   get '/auth/verify', to: 'authentications#verify'
   post '/users/:id/:product_id', to: 'users#add_product'
@@ -8,12 +7,10 @@ Rails.application.routes.draw do
   put '/users/:id/products', to: 'users#remove_all'
   put '/users/:id/products/:product_id', to: 'users#update_count'
   delete '/users/:id/:product_id/1', to: 'users#decrement_product'
+  get '/products/:product_id/reviews', to: 'reviews#get_product_reviews'
+  post '/reviews/:id/:product_id', to: 'reviews#create_review'
 
   resources :users 
   resources :products
- 
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#indexs"
+  resources :reviews
 end
