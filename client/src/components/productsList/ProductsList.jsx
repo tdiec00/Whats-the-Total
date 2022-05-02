@@ -9,6 +9,7 @@ export default function ProductsList() {
   // const [filteredResults, setFilteredResults] = useState([])
   const {category} = useParams()
 
+  //this component renders the products on the shopping page
   useEffect(() => {
     const fetchProducts = async () => {
       const res = await getAllProducts()

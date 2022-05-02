@@ -9,6 +9,7 @@ export default function ProductCard({product}) {
 
   const handleSubmit = async (product_id) => {
     const id = localStorage.getItem("id")
+    //if statement to check if user is logged in. If not then navigate to login page if they try to add a product to the shopping cart.
     if (id === null) {
       navigate("/")
     } else {
