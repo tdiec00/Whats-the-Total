@@ -9,6 +9,7 @@ export default function AddProduct() {
   const [category, setCategory] = useState("")
   const navigate = useNavigate()
 
+  //form for the admin to add a new product to the database
   const handleSubmit = async (e) => {
     e.preventDefault()
     const newProduct = {

@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom"
 export default function EditButton(props) {
   const navigate = useNavigate()
 
+  //button for admins to edit specific product details
   return (
     <button
       onClick={() => {

@@ -9,6 +9,7 @@ export default function EditForm() {
   const navigate = useNavigate()
   const {id} = useParams()
 
+  //the form that is rendered on the page for the admin to edit the products
   useEffect(() => {
     const fetchProduct = async () => {
       const product = await getOneProduct(id)
