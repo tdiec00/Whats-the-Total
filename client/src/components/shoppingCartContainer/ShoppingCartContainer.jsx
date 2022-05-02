@@ -17,13 +17,16 @@ export default function ShoppingCartContainer(props) {
       const products = await getUserProducts(id)
       const ids = products.map((product) => product.id)
       setProducts(products)
+      // filter for just unique values to display on the shopping cart page
       setProductList(products.filter(({id}, index) => !ids.includes(id, index + 1)))
     }
     fetchProducts()
   }, [id])
 
   const checkQuantity = (list_id, number) => {
+    //length of each specific product array to display quantity on the page
     number = products?.filter((product) => product.id === list_id).length
+    //if a specific product quantity hits 0 reloads page to remove product from the page
     if (number === 0) {
       window.location.reload(false)
     } else {
@@ -32,12 +35,14 @@ export default function ShoppingCartContainer(props) {
   }
 
   const handleDelete = async (product_id) => {
+    //api delete request to remove all of one specific item from the cart
     await deleteFromCart(id, product_id)
     window.location.reload(false)
   }
 
   const handleDecrement = (product_id) => {
     let flag = true
+    // map through products array and removes/splice an item that matches the product id
     products?.map((item, index) => {
       if (item.id === product_id && flag === true) {
         products.splice(index, 1)
@@ -45,17 +50,23 @@ export default function ShoppingCartContainer(props) {
       }
       return flag
     })
+    //replace the old products array with the new one
     setProducts([...products])
+    //the length of each product represents the amount of each item in the cart
     props.setCount(products.length)
     const id = localStorage.getItem("id")
+    //api delete request to remove product in the database
     decrementCount(id, product_id)
   }
 
   const handleIncrement = (product_id) => {
+    //filter for specific product and add to previous products array
     let product = productList.filter((item) => item.id === product_id)
     setProducts([...products, product[0]])
+    // set new count for increase in product quantity
     props.setCount(products.length)
     const id = localStorage.getItem("id")
+    // api post request to add the new product quantity increase
     addToCart(id, product_id)
   }
 
