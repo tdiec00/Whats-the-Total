@@ -19,7 +19,7 @@ export default function ShoppingTotal(props) {
   let taxTotal = Number((total.toFixed(2) * taxRate).toFixed(2))
 
   //the final total of the total including tax
-  let finalTotal = total + tax
+  let finalTotal = total + taxTotal
 
   return (
     <div className="total-container">

@@ -6,25 +6,9 @@ import "./filterInput.css"
 
 export default function FilterInput(props) {
   const [searchValue, setSearchValue] = useState("")
-
   const navigate = useNavigate()
 
-  // useEffect(() => {
-  //   const result = localStorage.getItem("search result")
-
-  //   setSearchValue(result)
-
-  //   const fetchProducts = async () => {
-  //     console.log(searchValue)
-  //     const res = await getAllProducts()
-  //     const searchProducts = res.filter((product) => {
-  //       return Object.values(product.name).join("").toLowerCase().includes(searchValue.toLowerCase())
-  //     })
-  //     props.setSearchResults(searchProducts)
-  //   }
-  //   fetchProducts()
-  // }, [])
-
+  //this is the search component that allows the user to search for any product
   const search = async (e) => {
     e.preventDefault()
     localStorage.removeItem("search result")
@@ -34,7 +18,6 @@ export default function FilterInput(props) {
       return Object.values(product.name).join("").toLowerCase().includes(searchValue.toLowerCase())
     })
     props.setSearchResults(searchProducts)
-
     navigate("/products/search")
   }
 
