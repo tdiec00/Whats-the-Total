@@ -14,11 +14,15 @@ Whats-the-Totalss
 ### Description
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 sss
 This is a grocery store/shopping cart app where admins are able to create and manage grocery store products. The user/customer is able to browse and add items to their shopping cart. The admins/owners are able to checkout the user/customers.
 =======
 This is a grocery store/shopping cart app where admins are able to create and manage grocery store products. The user/customer is able to browse and add items to their shopping cart. The admins/owners are able to checkout the user/customers.ss
 >>>>>>> 802b127 (test)
+=======
+This is a grocery store/shopping cart app where admins are able to create and manage grocery store products. The user/customer is able to browse and add items to their shopping cart. The admins/owners are able to checkout the user/customers.ss
+>>>>>>> 802b127aed6289028302b367764ff90e64220cfe
 
 <br>
 
