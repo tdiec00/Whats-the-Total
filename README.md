@@ -13,6 +13,7 @@ Whats-the-Total
 
 ### Description
 
+sss
 This is a grocery store/shopping cart app where admins are able to create and manage grocery store products. The user/customer is able to browse and add items to their shopping cart. The admins/owners are able to checkout the user/customers.
 
 <br>
